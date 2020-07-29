@@ -1,0 +1,873 @@
+{% load thumbnail %}
+{% load static %}
+{% block content %}
+<style>
+
+.nav-link {
+display: block;
+padding: 0.5rem 1rem;
+}
+
+.nav-link:hover, .nav-link:focus {
+text-decoration: none;
+}
+
+.nav-link.disabled {
+color: #6c757d;
+}
+
+.nav-tabs {
+border-bottom: 1px solid #dee2e6;
+}
+
+.nav-tabs .nav-item {
+margin-bottom: -1px;
+}
+
+.nav-tabs .nav-link {
+border: 1px solid transparent;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.nav-tabs .nav-link.disabled {
+color: #6c757d;
+background-color: transparent;
+border-color: transparent;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+color: #495057;
+background-color: #fff;
+border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs .dropdown-menu {
+margin-top: -1px;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+
+.nav-pills .nav-link {
+border-radius: 12px;
+background: #f4f2ed;
+color: #000000
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+color: #fff;
+background-color: #e8163f;
+}
+.nav-fill .nav-item {
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+text-align: center;
+}
+.box-menu{
+text-align: center;
+justify-content: center;
+padding-bottom: 32px;
+}
+.box-menu2{
+background: #f4f2ed;
+border-radius: 12px;
+border:1px solid #dee2e6;
+}
+.container-color{
+background:#ffffff ;
+padding-bottom: 34px;
+}
+.box-menu-container-p{
+padding: 4px;
+border-radius: 12px;
+}
+.box-menu-container{
+display: inline-block;
+background: #f4f2ed;
+padding-top:6px;
+padding-bottom: 6px;
+padding-left: 6px;
+padding-right: 6px;
+}
+.border-left{
+border-left:1px solid #f4f2ed; !important;
+}
+
+.image-menu{
+margin-top: 4px ;
+
+padding-right: 6px;
+}
+.header-menu{
+margin-top: 4px ;
+height: 56px;
+margin-right: 6px;
+margin-left: 6px;
+}
+    .header-menus{
+font-family: 'Futura';
+font-size: 28px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.descripcion-menu{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.text-menu{
+font-size: 10px;
+color: #96989f;
+margin-top: -2px;
+height: 60px;
+margin-left: 6px;
+margin-right: 6px;
+}
+.precio-menu{
+padding-top:-100px;
+width: 240px;
+text-align: right;
+
+}
+.badge-precio {
+color: #fff;
+background-color: #e8163f;
+padding-top:-100px;
+}
+.box-menu-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 40px;
+padding-bottom: 10px;
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media (min-width: 319px) and (max-width:373px) {
+    .header-menus{
+font-family: 'Futura';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+    .container-color{
+background:#ffffff ;
+padding-bottom: 34px;
+}
+.descripcion-menu{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.box-menu{
+text-align: center;
+justify-content: center;
+padding-bottom: 10px;
+}
+.box-menu2{
+background: #ffffff;
+border-radius: 12px;
+border:1px solid #ffffff;
+justify-content: center;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+color: #fff;
+background-color: #e8163f;
+font-size: 12px;
+}
+.nav-pills .nav-link {
+border-radius: 12px;
+background: #f4f2ed;
+color: #000000;
+font-size: 12px;
+border:1px solid #fff;
+}
+.box-menu-container-p{
+padding: 4px;
+border-radius: 12px;
+}
+.box-menu-container{
+display: inline-block;
+background: #f4f2ed;
+padding-top:6px;
+padding-bottom: 6px;
+padding-left: 6px;
+padding-right: 6px;
+}
+.image-menu{
+margin-top: 4px ;
+
+padding-right: 6px;
+}
+.header-menu{
+font-size: 12px;
+margin-top: 0px ;
+height: 10px;
+margin-right: 6px;
+margin-left: 6px;
+}
+.text-menu{
+font-size: 10px;
+color: #96989f;
+margin-top: -2px;
+height: 10px;
+margin-left: 6px;
+margin-right: 6px;
+}
+.precio-menu{
+font-size: 12px;
+padding-top:-90px;
+width: 240px;
+text-align: right;
+
+}
+.box-menu-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media (min-width:374px) and (max-width: 412px){
+.header-menus{
+font-family: 'Futura';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.container-color{
+background:#ffffff ;
+padding-bottom: 34px;
+}
+.descripcion-menu{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.box-menu{
+text-align: center;
+justify-content: center;
+padding-bottom: 10px;
+}
+.box-menu2{
+background: #ffffff;
+border-radius: 12px;
+border:1px solid #ffffff;
+justify-content: center;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+color: #fff;
+background-color: #e8163f;
+font-size: 12px;
+}
+.nav-pills .nav-link {
+border-radius: 12px;
+background: #f4f2ed;
+color: #000000;
+font-size: 12px;
+border:1px solid #fff;
+}
+.box-menu-container-p{
+padding: 4px;
+border-radius: 12px;
+}
+.box-menu-container{
+display: inline-block;
+background: #f4f2ed;
+padding-top:6px;
+padding-bottom: 6px;
+padding-left: 6px;
+padding-right: 6px;
+}
+.image-menu{
+margin-top: 4px ;
+
+padding-right: 6px;
+}
+.header-menu{
+font-size: 12px;
+margin-top: 0px ;
+height: 10px;
+margin-right: 6px;
+margin-left: 6px;
+}
+.text-menu{
+font-size: 10px;
+color: #96989f;
+margin-top: -2px;
+height: 10px;
+margin-left: 6px;
+margin-right: 6px;
+}
+.precio-menu{
+font-size: 12px;
+padding-top:-90px;
+width: 240px;
+text-align: right;
+
+}
+.box-menu-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media (min-width: 413px) and (max-width: 767px){
+.header-menus{
+font-family: 'Futura';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.container-color{
+background:#ffffff ;
+padding-bottom: 34px;
+}
+.descripcion-menu{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.box-menu{
+text-align: center;
+justify-content: center;
+padding-bottom: 10px;
+}
+.box-menu2{
+background: #ffffff;
+border-radius: 12px;
+border:1px solid #ffffff;
+justify-content: center;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+color: #fff;
+background-color: #e8163f;
+font-size: 12px;
+}
+.nav-pills .nav-link {
+border-radius: 12px;
+background: #f4f2ed;
+color: #000000;
+font-size: 12px;
+border:1px solid #fff;
+}
+.box-menu-container-p{
+padding: 4px;
+border-radius: 12px;
+}
+.box-menu-container{
+display: inline-block;
+background: #f4f2ed;
+padding-top:6px;
+padding-bottom: 6px;
+padding-left: 6px;
+padding-right: 6px;
+}
+.image-menu{
+margin-top: 4px ;
+
+padding-right: 6px;
+}
+.header-menu{
+font-size: 12px;
+margin-top: 0px ;
+height: 10px;
+margin-right: 6px;
+margin-left: 6px;
+}
+.text-menu{
+font-size: 10px;
+color: #96989f;
+margin-top: -2px;
+height: 10px;
+margin-left: 6px;
+margin-right: 6px;
+}
+.precio-menu{
+font-size: 12px;
+padding-top:-90px;
+width: 240px;
+text-align: right;
+
+}
+.box-menu-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+}
+    /* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media (min-width: 768px) and (max-width: 992px) {
+    .header-menus{
+font-family: 'Futura';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.container-color{
+background:#ffffff ;
+padding-bottom: 34px;
+}
+.descripcion-menu{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.box-menu{
+text-align: center;
+justify-content: center;
+padding-bottom: 10px;
+}
+.box-menu2{
+background: #ffffff;
+border-radius: 12px;
+border:1px solid #ffffff;
+justify-content: center;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+color: #fff;
+background-color: #e8163f;
+font-size: 12px;
+}
+.nav-pills .nav-link {
+border-radius: 12px;
+background: #f4f2ed;
+color: #000000;
+font-size: 12px;
+border:1px solid #fff;
+}
+.box-menu-container-p{
+padding: 4px;
+border-radius: 12px;
+}
+.box-menu-container{
+display: inline-block;
+background: #f4f2ed;
+padding-top:6px;
+padding-bottom: 6px;
+padding-left: 6px;
+padding-right: 6px;
+}
+.image-menu{
+margin-top: 4px ;
+
+padding-right: 6px;
+}
+.header-menu{
+font-size: 12px;
+margin-top: 0px ;
+height: 10px;
+margin-right: 6px;
+margin-left: 6px;
+}
+.text-menu{
+font-size: 10px;
+color: #96989f;
+margin-top: -2px;
+height: 10px;
+margin-left: 6px;
+margin-right: 6px;
+}
+.precio-menu{
+font-size: 12px;
+padding-top:-90px;
+width: 240px;
+text-align: right;
+
+}
+.box-menu-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+
+}
+</style>
+    <div class="container-fluid container-color" id="menu-menu">
+<div class="container">
+            <div class="row">
+            <div class="colmd-12 col-12 box-menu-titulo">
+                <img class="justify-content-center logo-murtado reveal-img-principal" src={% static 'img/logo/murtao-logo4.svg' %}>
+                <h6 class="header-menus reveal-titulo">Nuestra Carta</h6>
+                <h6 class="descripcion-menu reveal-textoleft">Sabores de mar a cordillera, con recetas de la patagonia</h6>
+            </div>
+        </div>
+    <div class="row box-menu reveal-textoleft">
+        <ul class="nav nav-pills box-menu2" id="pills-tab" role="tablist">
+            {% for obj in menu1 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link active" id="{{ obj.categoria }}" data-toggle="pill" href="#cat1" role="tab" aria-controls="Cat1" aria-selected="true">{{ obj.titulo }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat2 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat2" role="tab" aria-controls="Cat2" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat3 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat3" role="tab" aria-controls="Cat3" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat4 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat4" role="tab" aria-controls="Cat4" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat5 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat5" role="tab" aria-controls="Cat5" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat6 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat6" role="tab" aria-controls="Cat6" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat7 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat7" role="tab" aria-controls="Cat7" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat8 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat8" role="tab" aria-controls="Cat8" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat9 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat9" role="tab" aria-controls="Cat9" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat10 %}
+                <!-- %{ for }% -->
+                {% if forloop.first %}
+                    <!-- %{ if }% -->
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat10" role="tab" aria-controls="Cat10" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="container reveal-textoleft">
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="cat1" role="tabpanel" aria-labelledby="Cat1-tab">
+                {% for obj in menu1 %}
+                    <!-- %{ for }% -->
+                    {% if obj.estado == 'Publicado' %}
+                        <!-- %{ if }% -->
+                        <div class="row">
+                            {% for obj in cat1 %}
+                                <!-- %{ for }% -->
+
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row  rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu ">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="tab-pane fade" id="cat2" role="tabpanel" aria-labelledby="Cat2-tab">
+                {% for obj in menu1 %}
+                    {% if obj.estado == 'Publicado' %}
+                        <div class="row">
+                            {% for obj in cat2 %}
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="tab-pane fade" id="cat3" role="tabpanel" aria-labelledby="Cat3-tab">
+                <div class="row">
+                    {% for obj in cat3 %}
+                        <!-- %{ for }% -->
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cat4" role="tabpanel" aria-labelledby="Cat4-tab">
+                <div class="row">
+                    {% for obj in cat4 %}
+                        <!-- %{ for }% -->
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cat5" role="tabpanel" aria-labelledby="Cat5-tab">
+                <div class="row">
+                    {% for obj in cat5 %}
+                        <!-- %{ for }% -->
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cat6" role="tabpanel" aria-labelledby="Cat6-tab">
+                <div class="row">
+                    {% for obj in cat6 %}
+                        <!-- %{ for }% -->
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cat7" role="tabpanel" aria-labelledby="Cat7-tab">
+                <div class="row">
+                    {% for obj in cat7 %}
+                        <!-- %{ for }% -->
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cat8" role="tabpanel" aria-labelledby="Cat8-tab">
+                <div class="row">
+                    {% for obj in cat8 %}
+                        <!-- %{ for }% -->
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cat9" role="tabpanel" aria-labelledby="Cat9-tab">
+                <div class="row">
+                    {% for obj in cat9 %}
+                        <!-- %{ for }% -->
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cat10" role="tabpanel" aria-labelledby="Cat10-tab">
+                <div class="row">
+                    {% for obj in cat10 %}
+                        <!-- %{ for }% -->
+                                <div class="col-md-4 box-menu-container-p">
+                                    <div class="d-flex box-menu-container flex-row border rounded">
+                                        <div class=" image-menu">
+                                            <img src="{{ obj.imagen|thumbnail_url:'menu' }}" class="rounded-circle border-0" />
+                                        </div>
+                                        <div class="border-left">
+                                            <h6 class="header-menu"><p href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</p></h6>
+                                            <h6 class="text-menu">{{ obj.contenido|truncatechars:120 }}</h6>
+                                        </div>
+                                        <div class="precio-menu">
+                                            <span class="badge badge-warning">${{ obj.valor }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+{% endblock %}

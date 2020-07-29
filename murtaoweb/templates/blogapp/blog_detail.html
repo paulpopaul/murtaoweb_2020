@@ -1,0 +1,11 @@
+{% block content %}
+    {% for post in post %}
+    <img width="" class="" src="{{ post.imagen_blog.url }}"/>
+    <h1>{{ post.titulo }}</h1>
+    <h1>{{ post.contenido }}</h1>
+    <h1>{{ post.fecha_blog }}</h1>
+    <h1>{{ post.hora_blog }}</h1>
+    <h1>{{ post.linkblog }}</h1>
+    <h1>{{ post.video_blog }}</h1>
+    {% endfor %}
+{% endblock %}

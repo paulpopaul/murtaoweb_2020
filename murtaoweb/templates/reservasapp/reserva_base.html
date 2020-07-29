@@ -1,0 +1,1102 @@
+{% load static %}
+<style>
+.footer--reservation {
+position: relative;
+background-color: #000000;
+margin: auto;
+z-index: 2;
+border-radius: 12px;
+padding-top: 20px;
+}
+.footer--reservation-wrapper {
+padding: 14px 40px 40px 40px;
+}
+.footer--reservation h3 {
+font-family: 'Futura';
+font-size: 20px;
+font-weight: 400;
+line-height: 1;
+color: #ffffff;
+position: relative;
+text-align: center;
+margin-bottom: 24px;
+}
+.footer--reservation ul {
+margin-bottom: 40px;
+}
+.footer--reservation ul li {
+text-align: left;
+border-bottom: 1px dashed #49433f;
+padding: 8px 0;
+}
+.footer--reservation ul li span {
+float: right;
+}
+/* Footer #3 */
+.footer-3 .footer--reservation {
+margin-top: -100px;
+}
+/**/
+.divider--shape-10up {
+width: 92px;
+height: 20px;
+background: url(../static/img/horario/shape-10up.png) center no-repeat;
+position: absolute;
+top: -20px;
+left: 50%;
+margin-left: -46px;
+}
+
+.divider--shape-10down {
+width: 92px;
+height: 20px;
+background: url(../static/img/horario/shape-10down.png) center no-repeat;
+position: absolute;
+bottom: -20px;
+left: 50%;
+margin-left: -46px;
+}
+.divider--shape-11 {
+width: 100%;
+height: 16px;
+background: url(../static/img/horario/shape-11.png) center no-repeat;
+}
+.bg-blacktor{
+background: #f4f2ed;
+background-position: bottom;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.bg-container2{
+background: #f4f2ed;
+padding-bottom: 60px;
+}
+.letras-color{
+color: #fff;
+}
+
+.logo-reserva-box{
+text-align: center;
+justify-content: center;
+width: 200px;
+margin: 0 auto;
+padding: 12px;
+}
+.logo-reserva{
+text-align: center;
+justify-content: center;
+margin: 0 auto;
+padding-bottom: 10px;
+}
+.reserva-header{
+font-family: 'Futura';
+font-size: 28px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.reserva-text{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.icon-reserva-color{
+color:#ff8d00;
+}
+
+.input-group-texto {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-align: center;
+align-items: center;
+padding: 0.375rem 0.75rem;
+margin-bottom: 0;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #fff;
+text-align: center;
+white-space: nowrap;
+background-color: #dee2e6;
+
+border-radius: 0.25rem;
+border: 1px solid #dee2e6;
+}
+
+.box-btn-reserva{
+text-align: center;
+}
+.btn-reserva {
+font-family: 'SF Pro Display';
+font-size: 16px;
+font-weight: 400;
+color: #fff;
+border-radius: 12px;
+border: 1px solid #e8163f;
+line-height: 20px;
+margin-right: auto;
+margin-left: auto;
+height: 60px;
+width: 120px;
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+background: #e8163f;
+}
+
+.btn-reserva:hover {
+font-family: 'SF Pro Display';
+font-size: 16px;
+font-weight: 400;
+color: #fff;
+border-radius: 12px;
+border: 1px solid #e8163f;
+line-height: 20px;
+margin-right: auto;
+margin-left: auto;
+height: 60px;
+width: 120px;
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+background: #000000;
+}
+
+.reserva-label{
+color: #212529;
+font-weight: 600;
+padding-top: 6px;
+}
+
+.dia-label{
+color: #ff8d00;
+
+}
+.hora-label{
+color: #ff8d00;
+}
+
+.horario-header{
+text-align: center;
+font-size: 16px;
+color:#ffffff;
+padding-bottom: 12px;
+}
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media (min-width: 319px) and (max-width:373px) {
+    .footer--reservation {
+position: relative;
+background-color: #000000;
+margin: auto;
+z-index: 2;
+border-radius: 12px;
+padding-top: 0px;
+}
+.footer--reservation-wrapper {
+padding: 0px 30px 2px 30px;
+}
+
+.reserva-header{
+font-family: 'Futura';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.reserva-text{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.logo-reserva-box{
+text-align: center;
+justify-content: center;
+width: 100px;
+margin: 0 auto;
+}
+.logo-reserva{
+text-align: center;
+justify-content: center;
+margin: 0 auto;
+padding-bottom: 6px;
+}
+.horario-header{
+text-align: center;
+font-size: 14px;
+color:#ffffff;
+}
+.letras-color{
+color: #fff;
+font-size: 13px;
+}
+
+.dia-label{
+color: #ff8d00;
+font-size: 13px;
+
+}
+.hora-label{
+color: #ff8d00;
+font-size: 13px;
+}
+.reserva-header-2{
+font-family: 'Futura';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #ff8d00;
+text-align: center;
+padding-top: 30px;
+}
+.reserva-label{
+color: #212529;
+font-weight: 600;
+padding-top: 12px;
+font-size: 12px;
+    padding-left: 2px;
+}
+.form-control{
+font-size: 12px;
+}
+.box-btn-reserva{
+text-align: center;
+}
+.box-btn-reserva{
+text-align: left;
+}
+.btn-reserva {
+font-family: 'SF Pro Display';
+font-size: 13px;
+font-weight: 400;
+color: #fff;
+border-radius: 6px;
+border: 1px solid #e8163f;
+line-height: 2px;
+margin-right: auto;
+margin-left: auto;
+height: 24px;
+width: 86px;
+text-align: center;
+padding-top: 18px;
+padding-bottom: 18px;
+background: #e8163f;
+}
+
+.btn-reserva:hover {
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+color: #fff;
+border-radius: 6px;
+border: 1px solid #ff8d00;
+line-height: 2px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+width: 80px;
+text-align: center;
+padding-top: 18px;
+padding-bottom: 18px;
+background: #ff8d00;
+}
+.bg-container2{
+background: #f4f2ed;
+padding-bottom: 30px;
+}
+.icon-reserva-color{
+color:#ff8d00;
+    font-size: 10px;
+}
+/* Bootstrap 4 */
+.gj-datepicker-bootstrap [role="right-icon"] button {
+    width: 36px;
+    position: relative;
+
+    border: 1px solid #dee2e6;
+    color: #ff8d00;
+    background:#dee2e6;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button:hover {
+    color: #ffc107;
+    background:#212529;
+}
+
+/* Bootstrap 4 */
+.gj-timepicker-bootstrap [role="right-icon"] button {
+    width: 36px;
+    position: relative;
+    border: 1px solid #dee2e6;
+    color: #ff8d00;
+    background:#dee2e6;
+}
+
+.gj-timepicker-bootstrap [role="right-icon"] button:hover {
+    color: #ffc107;
+    background:#212529;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button .gj-icon,
+.gj-datepicker-bootstrap [role="right-icon"] button .material-icons {
+    position: absolute;
+    font-size: 12px;
+    top: 12px;
+    left: 12px;
+}
+.gj-timepicker-bootstrap [role="right-icon"] button .gj-icon,
+.gj-timepicker-bootstrap [role="right-icon"] button .material-icons {
+    position: absolute;
+    font-size: 12px;
+    top: 12px;
+    left: 12px;
+}
+.box-evento-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media (min-width:374px) and (max-width: 412px){
+.footer--reservation {
+position: relative;
+background-color: #000000;
+margin: auto;
+z-index: 2;
+border-radius: 12px;
+padding-top: 0px;
+}
+.footer--reservation-wrapper {
+padding: 0px 30px 2px 30px;
+}
+
+.reserva-header{
+font-family: 'Futura';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.reserva-text{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.logo-reserva-box{
+text-align: center;
+justify-content: center;
+width: 100px;
+margin: 0 auto;
+padding: 12px;
+}
+.logo-reserva{
+text-align: center;
+justify-content: center;
+margin: 0 auto;
+padding-bottom: 6px;
+}
+.horario-header{
+text-align: center;
+font-size: 14px;
+color:#ffffff;
+padding-bottom: 12px;
+}
+.letras-color{
+color: #fff;
+font-size: 14px;
+}
+
+.dia-label{
+color: #ff8d00;
+font-size: 14px;
+
+}
+.hora-label{
+color: #ff8d00;
+font-size: 14px;
+}
+.reserva-header-2{
+font-family: 'Futura';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #ff8d00;
+text-align: center;
+padding-top: 30px;
+}
+.reserva-label{
+color: #212529;
+font-weight: 600;
+padding-top: 12px;
+font-size: 12px;
+padding-left: 2px;
+}
+.form-control{
+font-size: 12px;
+}
+.box-btn-reserva{
+text-align: center;
+}
+.box-btn-reserva{
+text-align: left;
+}
+.btn-reserva {
+font-family: 'SF Pro Display';
+font-size: 13px;
+font-weight: 400;
+color: #fff;
+border-radius: 6px;
+border: 1px solid #e8163f;
+line-height: 2px;
+margin-right: auto;
+margin-left: auto;
+height: 24px;
+width: 86px;
+text-align: center;
+padding-top: 18px;
+padding-bottom: 18px;
+background: #e8163f;
+}
+
+.btn-reserva:hover {
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+color: #fff;
+border-radius: 6px;
+border: 1px solid #ff8d00;
+line-height: 2px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+width: 80px;
+text-align: center;
+padding-top: 18px;
+padding-bottom: 18px;
+background: #ff8d00;
+}
+.bg-container2{
+background: #f4f2ed;
+padding-bottom: 30px;
+}
+.icon-reserva-color{
+color:#ff8d00;
+font-size: 10px;
+}
+/* Bootstrap 4 */
+.gj-datepicker-bootstrap [role="right-icon"] button {
+width: 36px;
+position: relative;
+
+border: 1px solid #dee2e6;
+color: #ff8d00;
+background:#dee2e6;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button:hover {
+color: #ffc107;
+background:#212529;
+}
+
+/* Bootstrap 4 */
+.gj-timepicker-bootstrap [role="right-icon"] button {
+width: 36px;
+position: relative;
+border: 1px solid #dee2e6;
+color: #ff8d00;
+background:#dee2e6;
+}
+
+.gj-timepicker-bootstrap [role="right-icon"] button:hover {
+color: #ffc107;
+background:#212529;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button .gj-icon,
+.gj-datepicker-bootstrap [role="right-icon"] button .material-icons {
+position: absolute;
+font-size: 12px;
+top: 12px;
+left: 12px;
+}
+.gj-timepicker-bootstrap [role="right-icon"] button .gj-icon,
+.gj-timepicker-bootstrap [role="right-icon"] button .material-icons {
+position: absolute;
+font-size: 12px;
+top: 12px;
+left: 12px;
+}
+.box-evento-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media (min-width: 413px) and (max-width: 767px){
+.footer--reservation {
+position: relative;
+background-color: #000000;
+margin: auto;
+z-index: 2;
+border-radius: 12px;
+padding-top: 0px;
+}
+.footer--reservation-wrapper {
+padding: 0px 30px 2px 30px;
+}
+
+.reserva-header{
+font-family: 'Futura';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.reserva-text{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.logo-reserva-box{
+text-align: center;
+justify-content: center;
+width: 140px;
+margin: 0 auto;
+padding: 12px;
+}
+.logo-reserva{
+text-align: center;
+justify-content: center;
+margin: 0 auto;
+padding-bottom: 6px;
+}
+.horario-header{
+text-align: center;
+font-size: 16px;
+color:#ffffff;
+padding-bottom: 12px;
+}
+.letras-color{
+color: #fff;
+font-size: 16px;
+}
+
+.dia-label{
+color: #ff8d00;
+font-size: 16px;
+
+}
+.hora-label{
+color: #ff8d00;
+font-size: 16px;
+}
+.reserva-header-2{
+font-family: 'Futura';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #ff8d00;
+text-align: center;
+padding-top: 30px;
+}
+.reserva-label{
+color: #212529;
+font-weight: 600;
+padding-top: 12px;
+font-size: 14px;
+padding-left: 2px;
+}
+.form-control{
+font-size: 12px;
+}
+.box-btn-reserva{
+text-align: center;
+}
+.box-btn-reserva{
+text-align: left;
+}
+.btn-reserva {
+font-family: 'SF Pro Display';
+font-size: 13px;
+font-weight: 400;
+color: #fff;
+border-radius: 6px;
+border: 1px solid #e8163f;
+line-height: 2px;
+margin-right: auto;
+margin-left: auto;
+height: 24px;
+width: 86px;
+text-align: center;
+padding-top: 18px;
+padding-bottom: 18px;
+background: #e8163f;
+}
+
+.btn-reserva:hover {
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+color: #fff;
+border-radius: 6px;
+border: 1px solid #ff8d00;
+line-height: 2px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+width: 80px;
+text-align: center;
+padding-top: 18px;
+padding-bottom: 18px;
+background: #ff8d00;
+}
+.bg-container2{
+background: #f4f2ed;
+padding-bottom: 30px;
+}
+.icon-reserva-color{
+color:#ff8d00;
+font-size: 10px;
+}
+/* Bootstrap 4 */
+.gj-datepicker-bootstrap [role="right-icon"] button {
+width: 36px;
+position: relative;
+
+border: 1px solid #dee2e6;
+color: #ff8d00;
+background:#dee2e6;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button:hover {
+color: #ffc107;
+background:#212529;
+}
+
+/* Bootstrap 4 */
+.gj-timepicker-bootstrap [role="right-icon"] button {
+width: 36px;
+position: relative;
+border: 1px solid #dee2e6;
+color: #ff8d00;
+background:#dee2e6;
+}
+
+.gj-timepicker-bootstrap [role="right-icon"] button:hover {
+color: #ffc107;
+background:#212529;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button .gj-icon,
+.gj-datepicker-bootstrap [role="right-icon"] button .material-icons {
+position: absolute;
+font-size: 12px;
+top: 12px;
+left: 12px;
+}
+.gj-timepicker-bootstrap [role="right-icon"] button .gj-icon,
+.gj-timepicker-bootstrap [role="right-icon"] button .material-icons {
+position: absolute;
+font-size: 12px;
+top: 12px;
+left: 12px;
+}
+.box-evento-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+}
+    /* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media (min-width: 768px) and (max-width: 992px) {
+    .footer--reservation {
+position: relative;
+background-color: #000000;
+margin: auto;
+z-index: 2;
+border-radius: 12px;
+padding-top: 0px;
+}
+.footer--reservation-wrapper {
+padding: 0px 30px 2px 30px;
+}
+
+.reserva-header{
+font-family: 'Futura';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.reserva-text{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.logo-reserva-box{
+text-align: center;
+justify-content: center;
+width: 140px;
+margin: 0 auto;
+padding: 12px;
+}
+.logo-reserva{
+text-align: center;
+justify-content: center;
+margin: 0 auto;
+padding-bottom: 6px;
+}
+.horario-header{
+text-align: center;
+font-size: 12px;
+color:#ffffff;
+padding-bottom: 12px;
+}
+.letras-color{
+color: #fff;
+font-size: 12px;
+}
+
+.dia-label{
+color: #ff8d00;
+font-size: 12px;
+
+}
+.hora-label{
+color: #ff8d00;
+font-size: 12px;
+}
+.reserva-header-2{
+font-family: 'Futura';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #ff8d00;
+text-align: center;
+padding-top: 30px;
+}
+.reserva-label{
+color: #212529;
+font-weight: 600;
+padding-top: 12px;
+font-size: 14px;
+padding-left: 2px;
+}
+.form-control{
+font-size: 12px;
+}
+.box-btn-reserva{
+text-align: center;
+}
+.box-btn-reserva{
+text-align: left;
+}
+.btn-reserva {
+font-family: 'SF Pro Display';
+font-size: 13px;
+font-weight: 400;
+color: #fff;
+border-radius: 6px;
+border: 1px solid #e8163f;
+line-height: 2px;
+margin-right: auto;
+margin-left: auto;
+height: 24px;
+width: 86px;
+text-align: center;
+padding-top: 18px;
+padding-bottom: 18px;
+background: #e8163f;
+}
+
+.btn-reserva:hover {
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+color: #fff;
+border-radius: 6px;
+border: 1px solid #ff8d00;
+line-height: 2px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+width: 80px;
+text-align: center;
+padding-top: 18px;
+padding-bottom: 18px;
+background: #ff8d00;
+}
+.bg-container2{
+background: #f4f2ed;
+padding-bottom: 30px;
+}
+.icon-reserva-color{
+color:#ff8d00;
+font-size: 10px;
+}
+/* Bootstrap 4 */
+.gj-datepicker-bootstrap [role="right-icon"] button {
+width: 36px;
+position: relative;
+
+border: 1px solid #dee2e6;
+color: #ff8d00;
+background:#dee2e6;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button:hover {
+color: #ffc107;
+background:#212529;
+}
+
+/* Bootstrap 4 */
+.gj-timepicker-bootstrap [role="right-icon"] button {
+width: 36px;
+position: relative;
+border: 1px solid #dee2e6;
+color: #ff8d00;
+background:#dee2e6;
+}
+
+.gj-timepicker-bootstrap [role="right-icon"] button:hover {
+color: #ffc107;
+background:#212529;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button .gj-icon,
+.gj-datepicker-bootstrap [role="right-icon"] button .material-icons {
+position: absolute;
+font-size: 12px;
+top: 12px;
+left: 12px;
+}
+.gj-timepicker-bootstrap [role="right-icon"] button .gj-icon,
+.gj-timepicker-bootstrap [role="right-icon"] button .material-icons {
+position: absolute;
+font-size: 12px;
+top: 12px;
+left: 12px;
+}
+.box-evento-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 30px;
+}
+}
+
+</style>
+
+<div class="container-fluid bg-blacktor" id="menu-reserva">
+    <div class="container bg-container2">
+                <div class="row">
+                <div class="colmd-12 col-12 box-evento-titulo">
+                    <img class="justify-content-center logo-murtado reveal-img-principal" src={% static 'img/logo/murtao-logo4-6.svg' %}>
+                    <h6 class="reserva-header reveal-titulo">Reserva tu Mesa</h6>
+                    <h6 class="reserva-text reveal-textoleft">te contactamos a la brevedad</h6>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-4 reveal-textoleft">
+                <div class="footer--reservation">
+                    <div class="divider--shape-10up"></div>
+                    <div class="logo-reserva-box">
+                        <img class="logo-reserva" src={% static 'img/logo/murtao-logo-0.svg' %}>
+                    </div>
+                    <h6 class="horario-header">Horario Atención</h6>
+                    <div class="footer--reservation-wrapper">
+                        <ul class="list-unstyled letras-color">
+                            <li class="">Lunes <span class="">12:30 – 23:30</span></li>
+                            <li class="" >Martes <span class="">12:30 – 23:30</span></li>
+                            <li class="">Miércoles <span class="">12:30 – 23:30</span></li>
+                            <li class="">Jueves<span class="">12:30 – 23:30</span></li>
+                            <li class="">Viernes<span class="">12:30 – 23:30</span></li>
+                            <li class="dia-label">Sábado <span class="hora-label">12:30 – 23:30</span></li>
+                            <li class="dia-label">Domingo <span class="hora-label">13:00 - 16:30</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="divider--shape-10down  d-none d-sm-block"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-6 reveal-textoright">
+
+                {% if form.is_valid == False %}
+                <form action="" method="post" name="ReservaForm">
+                    {% csrf_token %}
+                    <div class="form-group" id="reserva">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="reserva-label">Nombre</label>
+                                <div class="input-group">
+                                    {{ form.nombre_persona.errors }}
+                                    {{ form.nombre_persona }}
+                                    <div class="input-group-append">
+                                    <div class="input-group-texto"><i class="fa fa-pencil icon-reserva-color"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="reserva-label">Email</label>
+                                <div class="input-group">
+                                    {{ form.email.errors }}
+                                    {{ form.email }}
+                                    <div class="input-group-append">
+                                    <div class="input-group-texto"><i class="fa fa-envelope icon-reserva-color"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="reserva-label">Fecha</label>
+                                <div class="input-group">
+                                    {{ form.fecha_evento.errors }}
+                                    {{ form.fecha_evento }}
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="reserva-label">Hora</label>
+                                <div class="input-group ">
+                                    {{ form.hora_evento.errors }}
+                                    {{ form.hora_evento }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="reserva-label">Nº Invitados</label>
+                                <div class="input-group">
+                                    {{ form.numeros_invitados.errors }}
+                                    {{ form.numeros_invitados }}
+                                    <div class="input-group-append">
+                                    <div class="input-group-texto"><i class="fa fa-user icon-reserva-color pl-1"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="reserva-label">Teléfono</label>
+                                <div class="input-group">
+                                    {{ form.telefono_invitado.errors }}
+                                    {{ form.telefono_invitado }}
+                                    <div class="input-group-append">
+                                    <div class="input-group-texto"><i class="fa fa-phone icon-reserva-color  pl-1"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="reserva-label">Mensaje</label>
+                                <div class="input-group">
+                                    {{ form.mensaje_evento.errors }}
+                                    {{ form.mensaje_evento }}
+                                    <div class="input-group-append">
+                                    <div class="input-group-texto"><i class="fa fa-comment-o icon-reserva-color "></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-btn-reserva">
+                        <button type="submit" class="btn btn-reserva">Reservar</button>
+                    </div>
+                </form>
+                {% elif form.is_valid == True %}
+                    <h3 class="title center-align">'Mensaje enviado :)'</h3>
+                {% else %}
+                    <script>
+                        function reserva() {
+                            window.location = "redirect/";
+                        }
+                        setTimeout("reserva()");
+                    </script>
+                {% endif %}
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<script>
+$(function () {
+$('.datepicker').datepicker({
+uiLibrary: 'bootstrap4',
+locale: 'es-es',
+format: 'dd/mm/yyyy',
+disableDates:  function (date) {
+var disabled = [4,5,20,25];
+if (disabled.indexOf(date.getDate()) == -1 ) {
+return true;
+} else {
+return false;
+}
+}
+});
+gj.core.messages['es-es'] = {
+monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+monthShortNames: ['ene.', 'feb.', 'mar', 'abr.', 'may', 'jun', 'jul.', 'ago', 'set.', 'oct.', 'nov.', 'dic.'],
+weekDaysMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+weekDaysShort: ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'],
+weekDays: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'],
+am: 'AM',
+pm: 'PM',
+ok: 'OK',
+cancel: 'Cancelar'
+};
+$('.timepicker').timepicker({
+uiLibrary: 'bootstrap4',
+/*value: '10:00',*/
+locale: 'es-es',
+modal: false,
+header: true,
+footer: true
+});
+});
+</script>

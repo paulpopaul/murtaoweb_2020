@@ -1,0 +1,1 @@
+gracias por la reserva !{{ object.nombre_persona }} {{ reserva.nombre_persona }} {{ nombre_persona }}

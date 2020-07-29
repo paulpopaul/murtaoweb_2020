@@ -1,0 +1,864 @@
+{% load static %}
+{% load thumbnail %}
+<style>
+
+/*--------------------------------  Box Eventos ----*/
+.box-evento{
+width: 100%;
+
+}
+.box-evento-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 40px;
+padding-bottom: 42px;
+}
+.box-evento-titulo-dos{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-bottom: 6px;
+}
+.header-evento{
+font-family: 'Futura';
+font-size: 28px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-descripcion{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+/*--------------------------------  Fecha ----*/
+.dia-fecha-evento{
+font-family: 'SF Pro Display';
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+font-size: 20px;
+font-weight: 800;
+font-style: normal;
+color: #000;
+background: #f7f6f6;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+padding: 6px 0 4px 0;
+}
+.mes-fecha-evento{
+font-family: 'SF Pro Display';
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+font-size: 12px;
+font-weight: 600;
+font-style: normal;
+color: #fff;
+background: #e8163f;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+padding: 2px 0 4px 0;
+}
+/*--------------------------------  Imagen ----*/
+.box-imagen-evento{
+    padding-top: 2px;
+
+}
+.img-evento{
+text-align: center;
+border-radius: 6px;
+}
+/*--------------------------------  Nombre ----*/
+.nombre-evento a{
+font-family: 'SF Pro Display';
+font-size: 18px;
+font-weight: 600;
+font-style: normal;
+color: #111111;
+}
+
+.descripcion-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+margin-top: -4px;
+}
+/*--------------------------------  Ubicacion ----*/
+.box-ubicacion-evento{
+display: inline-block;
+padding-top: 20px;
+}
+.icono-ubicacion-evento {
+color: #212529;
+    display: flex;
+}
+.text-ubicacion-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+margin: 0 5px;
+}
+/*--------------------------------  Horario ----*/
+.box-horario-evento{
+display: flex;
+padding-top: 20px;
+}
+/*--------------------------------  Enlaces ----*/
+.box-enlaces-evento{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+
+}
+.btn-evento {
+font-family: 'SF Pro Display';
+font-size: 11px;
+font-weight: 600;
+border: 2px solid #e8163f;
+color: #fff;
+border-radius: 6px;
+width: 110px;
+margin-top:0.6em;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+text-align: center;
+padding-top: 7px;
+padding-bottom: 7px;
+background: #e8163f;
+}
+.btn-evento:hover, .btn-event:focus {
+background:#54175e;
+border: 2px solid #54175e;
+color: #fff;
+transition: box-shadow .5s ease, -webkit-transform .2s ease;
+transition: box-shadow .5s ease, transform .2s ease;
+transition: box-shadow .5s ease, transform .2s ease, -webkit-transform .2s ease;
+will-change: transform;
+}
+
+.btn-evento:active {
+background: #54175e;
+color: #f5f5f5;
+transition: box-shadow .5s ease, -webkit-transform .2s ease;
+transition: box-shadow .5s ease, transform .2s ease;
+transition: box-shadow .5s ease, transform .2s ease, -webkit-transform .2s ease;
+border: 1px solid #54175e;
+}
+
+.btn-evento-cancelado {
+font-family: 'SF Pro Display';
+font-size: 11px;
+font-weight: 600;
+border: 2px solid #19193f;
+color: #636687;
+border-radius: 30px;
+width: 110px;
+margin-top:0.6em;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+text-align: center;
+padding-top: 7px;
+padding-bottom: 7px;
+display: inline-block;
+background: #19193f;
+cursor: pointer;
+}
+
+.btn-evento-cancelado:hover, .btn-evento-cancelado:focus {
+background:#19193f;
+border: 2px solid #19193f;
+color: #636687;
+}
+
+.btn-evento-cancelado:active {
+background: #19193f;
+color: #636687;
+border: 1px solid #19193f;
+}
+.separador-evento{
+border:1px solid #f7f6f6;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-evento-box{
+text-align: center;
+padding-top: 30px;
+padding-bottom: 50px;
+
+}
+.enlace-evento-vertodo{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+}
+.enlace-evento-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+
+.container-color-eventos{
+background:#ffffff ;
+}
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media (min-width: 319px) and (max-width:373px) {
+
+    .box-nombre-evento{
+    padding-left: 38px !important;
+
+}
+
+.header-evento{
+font-family: 'Futura';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-descripcion{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+/*--------------------------------  Fecha ----*/
+
+.evento-box-box{
+width: 200px;
+    padding-top: 4px;
+}
+
+.box-dia-fecha-evento{
+width: 40px;
+background: #e8163f;
+border-top-left-radius: 16px;
+border-top-right-radius: 16px;
+}
+.dia-fecha-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 800;
+font-style: normal;
+color: #000;
+}
+
+.box-mes-fecha-evento{
+background: #f7f6f6;
+border-bottom-left-radius: 16px;
+border-bottom-right-radius: 16px;
+}
+.mes-fecha-evento{
+font-family: 'SF Pro Display';
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+font-size: 8px;
+font-weight: 600;
+font-style: normal;
+color: #fff;
+background: #e8163f;
+width: 40px;
+}
+/*--------------------------------  Imagen ----*/
+.box-imagen-evento{
+    padding-top: 10px;
+}
+.img-evento{
+text-align: center;
+border-radius: 6px;
+    width: 60px;
+}
+/*--------------------------------  Nombre ----*/
+.nombre-evento a{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 600;
+font-style: normal;
+color: #111111;
+}
+
+.descripcion-evento{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+margin-top: -4px;
+}
+
+/*--------------------------------  BTN EVENTO ----*/
+
+.box-enlaces-evento{
+text-align: center;
+padding-right:64px;
+
+}
+.btn-evento {
+font-family: 'SF Pro Display';
+font-size: 10px;
+font-weight: 600;
+border: 2px solid #e8163f;
+color: #fff;
+border-radius: 12px;
+width: 80px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+text-align: center;
+background: #e8163f;
+line-height: 12px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-evento-box{
+text-align: center;
+padding-top: 0px;
+padding-bottom: 22px;
+
+}
+.enlace-evento-vertodo{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+}
+.enlace-evento-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+
+.container-color-eventos{
+background:#ffffff ;
+    padding-top: 20px;
+}
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media (min-width:374px) and (max-width: 412px){
+    .box-nombre-evento{
+    padding-left: 38px !important;
+
+}
+.header-evento{
+font-family: 'Futura';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-descripcion{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+/*--------------------------------  Fecha ----*/
+
+.evento-box-box{
+width: 200px;
+padding-top: 4px;
+}
+
+.box-dia-fecha-evento{
+width: 40px;
+background: #e8163f;
+border-top-left-radius: 16px;
+border-top-right-radius: 16px;
+}
+.dia-fecha-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 800;
+font-style: normal;
+color: #000;
+}
+
+.box-mes-fecha-evento{
+background: #f7f6f6;
+border-bottom-left-radius: 16px;
+border-bottom-right-radius: 16px;
+}
+.mes-fecha-evento{
+font-family: 'SF Pro Display';
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+font-size: 8px;
+font-weight: 600;
+font-style: normal;
+color: #fff;
+background: #e8163f;
+width: 40px;
+}
+/*--------------------------------  Imagen ----*/
+.box-imagen-evento{
+padding-top: 10px;
+}
+.img-evento{
+text-align: center;
+border-radius: 6px;
+width: 60px;
+}
+/*--------------------------------  Nombre ----*/
+.nombre-evento a{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 600;
+font-style: normal;
+color: #111111;
+}
+
+.descripcion-evento{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+margin-top: -4px;
+}
+
+/*--------------------------------  BTN EVENTO ----*/
+
+.box-enlaces-evento{
+text-align: center;
+padding-right:30px;
+
+}
+.btn-evento {
+font-family: 'SF Pro Display';
+font-size: 10px;
+font-weight: 600;
+border: 2px solid #e8163f;
+color: #fff;
+border-radius: 6px;
+width: 80px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+text-align: center;
+background: #e8163f;
+line-height: 14px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-evento-box{
+text-align: center;
+padding-top: 0px;
+padding-bottom: 20px;
+
+}
+.enlace-evento-vertodo{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #e8163f;
+}
+.enlace-evento-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+
+.container-color-eventos{
+background:#ffffff ;
+padding-top: 20px;
+}
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media (min-width: 413px) and (max-width: 767px){
+
+    .box-nombre-evento{
+    padding-left: 38px !important;
+
+}
+.header-evento{
+font-family: 'Futura';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-descripcion{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+/*--------------------------------  Fecha ----*/
+
+.evento-box-box{
+width: 200px;
+padding-top: 4px;
+}
+
+.box-dia-fecha-evento{
+width: 40px;
+background: #e8163f;
+border-top-left-radius: 16px;
+border-top-right-radius: 16px;
+}
+.dia-fecha-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 800;
+font-style: normal;
+color: #000;
+}
+
+.box-mes-fecha-evento{
+background: #f7f6f6;
+border-bottom-left-radius: 16px;
+border-bottom-right-radius: 16px;
+}
+.mes-fecha-evento{
+font-family: 'SF Pro Display';
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+font-size: 11px;
+font-weight: 600;
+font-style: normal;
+color: #fff;
+background: #e8163f;
+width: 40px;
+}
+/*--------------------------------  Imagen ----*/
+.box-imagen-evento{
+padding-top: 10px;
+}
+.img-evento{
+text-align: center;
+border-radius: 6px;
+width: 60px;
+}
+/*--------------------------------  Nombre ----*/
+.nombre-evento a{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 600;
+font-style: normal;
+color: #111111;
+}
+
+.descripcion-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+margin-top: -4px;
+}
+
+/*--------------------------------  BTN EVENTO ----*/
+
+.box-enlaces-evento{
+text-align: center;
+padding-right:16px;
+
+}
+.btn-evento {
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 600;
+border: 2px solid #e8163f;
+color: #fff;
+border-radius: 6px;
+width: 80px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+text-align: center;
+background: #e8163f;
+line-height: 14px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-evento-box{
+text-align: center;
+padding-top: 0px;
+padding-bottom: 20px;
+
+}
+.enlace-evento-vertodo{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #e8163f;
+}
+.enlace-evento-vertodo:hover{
+font-family: 'SF Pro Display';
+
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+
+.container-color-eventos{
+background:#ffffff ;
+padding-top: 20px;
+}
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media (min-width: 768px) and (max-width: 992px) {
+}
+/*--------------------------------  Fecha ----*/
+
+.evento-box-box{
+width: 200px;
+padding-top: 4px;
+
+}
+
+.box-dia-fecha-evento{
+width: 50px;
+background: #e8163f;
+border-top-left-radius: 16px;
+border-top-right-radius: 16px;
+}
+.dia-fecha-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 800;
+font-style: normal;
+color: #000;
+}
+
+.box-mes-fecha-evento{
+    width: 50px;
+
+background: #f7f6f6;
+border-bottom-left-radius: 16px;
+border-bottom-right-radius: 16px;
+}
+.mes-fecha-evento{
+font-family: 'SF Pro Display';
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+font-size: 11px;
+font-weight: 600;
+font-style: normal;
+color: #fff;
+background: #e8163f;
+width: 40px;
+}
+/*--------------------------------  Imagen ----*/
+.box-imagen-evento{
+padding-top: 4px;
+
+    padding-left: 24px;
+}
+.img-evento{
+text-align: center;
+border-radius: 6px;
+width: 60px;
+}
+/*--------------------------------  Nombre ----*/
+    .box-nombre-evento{
+        padding-top: 4px;
+    }
+.nombre-evento a{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 600;
+font-style: normal;
+color: #111111;
+
+}
+
+.descripcion-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+margin-top: -4px;
+}
+/*--------------------------------  Ubicacion ----*/
+.box-ubicacion-evento{
+display: inline-flex;
+padding-top: 20px;
+
+}
+.icono-ubicacion-evento {
+color: #212529;
+    display: flex;
+}
+.text-ubicacion-evento{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+margin: 0 5px;
+}
+/*--------------------------------  Horario ----*/
+.box-horario-evento{
+display:flex;
+padding-right:120px;
+}
+/*--------------------------------  BTN EVENTO ----*/
+
+.box-enlaces-evento{
+text-align: center;
+padding-right:0px;
+
+}
+.btn-evento {
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 600;
+border: 2px solid #e8163f;
+color: #fff;
+border-radius: 6px;
+width: 90px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+text-align: center;
+background: #e8163f;
+line-height: 14px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-evento-box{
+text-align: center;
+padding-top: 0px;
+padding-bottom: 20px;
+
+}
+.enlace-evento-vertodo{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #e8163f;
+}
+.enlace-evento-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+
+.container-color-eventos{
+background:#ffffff ;
+padding-top: 20px;
+}
+
+
+
+</style>
+{% block content %}
+        <div class=" container-color-eventos" id="menu-eventos">
+            <div class="container ">
+                <div class="row">
+
+                    <div class="colmd-12 col-12 box-evento-titulo-dos">
+                        <img class="justify-content-center logo-murtado reveal-img-principal"  src={% static 'img/logo/murtao-logo4.svg' %}>
+                        <h6 class="header-evento reveal-titulo">Próximos Eventos</h6>
+                        <h6 class="header-descripcion reveal-textoleft">Apúntate y sé parte de próximas actividades</h6>
+                    </div>
+                </div>
+                <hr class="separador-evento">
+                {% for obj in objects_list %}
+                    <!-- %{ for }% -->
+                    <div class="row box-evento reveal-textoleft">
+                        <div class="col-md-12 col-12">
+                            <div class="row">
+                                <div class="col-md-1 col-1 evento-box-box ">
+                                    <div class="box-dia-fecha-evento ">
+                                        <h6 class="dia-fecha-evento">{{ obj.fecha|date:"d" }}</h6>
+                                    </div>
+                                    <div class="box-mes-fecha-evento">
+                                        <h6 class="mes-fecha-evento">{{ obj.fecha|date:"M" }}</h6>
+                                    </div>
+                                </div>
+
+                                <!--<div class="col-md-1b col-1b box-imagen-evento">
+                                    <img  class="img-evento "  src={{ obj.imagen|thumbnail_url:'eventos' }}>
+                                </div>-->
+                                <div class="col-md-5 col-5 box-nombre-evento ">
+                                    <h6 class="nombre-evento"><!--<a href="{% url 'eventosapp:evento_detail' slug=obj.slug %}">-->{{ obj.nombre }}</a></h6>
+                                    <h6 class="descripcion-evento  ">{{ obj.descripcion|truncatechars:30 }}</h6>
+                                </div>
+                                <div class="col-md-1 d-none d-lg-block">
+                                </div>
+                                <div class="col-md-1 col-1 box-horario-evento  d-none d-sm-block ">
+                                    <span class="icono-ubicacion-evento fa fa-clock-o fa-1x"><h6 class="text-ubicacion-evento">{{ obj.hora }}</h6></span>
+
+                                </div>
+                                <div class="col-md-2 col-3 box-ubicacion-evento  d-none d-lg-block ">
+                                    <span class="icono-ubicacion-evento fa fa-map-marker fa-1x"><h6 class="text-ubicacion-evento">{{ obj.lugar }}</h6></span>
+
+                                </div>
+                                <div class="col-md-1 col-1 box-enlaces-evento ">
+                                    <a target="_blank" href="https://www.facebook.com/Murtao/" class="btn btn-evento ">Ir a Evento</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="separador-evento">
+                {% endfor %}
+                <!--<div class="container">
+                    <div class="row">
+                        <div class="col-12 enlace-evento-box reveal-textoleft">
+                            <a href="{% url 'eventosapp:evento_list' %}" class="enlace-evento-vertodo"><span class="fa fa-long-arrow-right fa-1x"></span></a>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
+        </div>
+{% endblock %}

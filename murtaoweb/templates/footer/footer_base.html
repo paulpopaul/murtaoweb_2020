@@ -1,0 +1,563 @@
+{% load static %}
+<style>
+.footer-box {
+background : #111111;
+padding-top: 40px;
+}
+.footer-texto {
+font-family: 'SF Pro Display';
+color:#424653;
+font-size: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.2em;
+text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+padding-left: 2px;
+margin-bottom : 25px;
+}
+/**/
+.footer-social {
+padding: 10px 0;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: center;
+}
+.icono-social > a {
+color: #ff8d00;
+font-size: 14px;
+font-weight: 500;
+text-transform: uppercase;
+padding: 0 4px;
+}
+.icono-social > a:hover {
+color: #fc6c3f;
+}
+.icono-social > a > i {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid #ff8d00;
+width: 42px;
+height: 42px;
+line-height: 42px;
+}
+.icono-social > a > i:hover {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid  #fc6c3f;
+width: 42px;
+height: 42px;
+line-height: 42px;
+}
+/**/
+.comunidad-texto{
+font-family: 'SF Pro Display';
+padding-top: 10px;
+color: #fff;
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.amigos-texto{
+font-family: 'SF Pro Display';
+color:#fff;
+font-size: 12px;
+padding-top: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+/**/
+footer ul{
+list-style:none;
+margin:0 auto;
+display:inline-block;
+padding-top:50px;
+padding-bottom: 50px;
+}
+footer ul li{
+
+}
+footer ul li a{
+font-family: 'SF Pro Display';
+font-size: 12px;
+color:#ff8d00;
+padding:11px;
+padding-top: 6px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.imagen-footer{
+width: 350px;
+padding-bottom: 3px;
+}
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media (min-width: 319px) and (max-width:373px) {
+.footer-box {
+background : #111111;
+padding-top: 0px;
+}
+.imagen-footer{
+width: 180px;
+padding-bottom: 3px;
+}
+.footer-texto {
+font-family: 'SF Pro Display';
+color:#424653;
+font-size: 9px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.2em;
+text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+padding-left: 2px;
+margin-bottom : 3px;
+}
+.comunidad-texto{
+font-family: 'SF Pro Display';
+padding-top: 3px;
+color: #fff;
+font-size: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.amigos-texto{
+font-family: 'SF Pro Display';
+color:#fff;
+font-size: 11px;
+padding-top: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.menu-nav-3{
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+
+}
+.icono-social > a {
+color: #ff8d00;
+font-size: 14px;
+font-weight: 500;
+text-transform: uppercase;
+padding: 0 2px;
+}
+.icono-social > a:hover {
+color: #fc6c3f;
+}
+.icono-social > a > i {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid #ff8d00;
+width: 36px;
+height: 36px;
+line-height: 36px;
+}
+.icono-social > a > i:hover {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid  #fc6c3f;
+width: 36px;
+height: 36px;
+line-height: 36px;
+}
+
+/**/
+footer ul{
+list-style:none;
+margin:0 auto;
+display:inline-block;
+padding-top:18px;
+padding-bottom: 30px;
+}
+
+footer ul li{
+text-align: center;
+display: inline-block;
+justify-content: center;
+}
+
+footer ul li a{
+font-family: 'SF Pro Display';
+font-size: 10px;
+color:#ff8d00;
+padding:10px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+
+}
+
+    /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media (min-width:374px) and (max-width: 412px) {
+.footer-box {
+background : #111111;
+padding-top: 0px;
+}
+.imagen-footer{
+width: 180px;
+padding-bottom: 3px;
+}
+.footer-texto {
+font-family: 'SF Pro Display';
+color:#424653;
+font-size: 9px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.2em;
+text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+padding-left: 2px;
+margin-bottom : 3px;
+}
+.comunidad-texto{
+font-family: 'SF Pro Display';
+padding-top: 3px;
+color: #fff;
+font-size: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.amigos-texto{
+font-family: 'SF Pro Display';
+color:#fff;
+font-size: 11px;
+padding-top: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.menu-nav-3{
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+
+}
+.icono-social > a {
+color: #ff8d00;
+font-size: 14px;
+font-weight: 500;
+text-transform: uppercase;
+padding: 0 2px;
+}
+.icono-social > a:hover {
+color: #fc6c3f;
+}
+.icono-social > a > i {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid #ff8d00;
+width: 36px;
+height: 36px;
+line-height: 36px;
+}
+.icono-social > a > i:hover {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid  #fc6c3f;
+width: 36px;
+height: 36px;
+line-height: 36px;
+}
+
+/**/
+footer ul{
+list-style:none;
+margin:0 auto;
+display:inline-block;
+padding-top:18px;
+padding-bottom: 30px;
+}
+
+footer ul li{
+text-align: center;
+display: inline-block;
+justify-content: center;
+}
+
+footer ul li a{
+font-family: 'SF Pro Display';
+font-size: 10px;
+color:#ff8d00;
+padding:10px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+}
+
+    /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media (min-width: 413px) and (max-width: 767px){
+.footer-box {
+background : #111111;
+padding-top: 0px;
+}
+.imagen-footer{
+width: 180px;
+padding-bottom: 10px;
+}
+.footer-texto {
+font-family: 'SF Pro Display';
+color:#424653;
+font-size: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.2em;
+text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+padding-left: 2px;
+margin-bottom : 3px;
+}
+.comunidad-texto{
+font-family: 'SF Pro Display';
+padding-top: 3px;
+color: #fff;
+font-size: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.amigos-texto{
+font-family: 'SF Pro Display';
+color:#fff;
+font-size: 11px;
+padding-top: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.menu-nav-3{
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+
+}
+.icono-social > a {
+color: #ff8d00;
+font-size: 14px;
+font-weight: 500;
+text-transform: uppercase;
+padding: 0 2px;
+}
+.icono-social > a:hover {
+color: #fc6c3f;
+}
+.icono-social > a > i {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid #ff8d00;
+width: 36px;
+height: 36px;
+line-height: 36px;
+}
+.icono-social > a > i:hover {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid  #fc6c3f;
+width: 36px;
+height: 36px;
+line-height: 36px;
+}
+
+/**/
+footer ul{
+list-style:none;
+margin:0 auto;
+display:inline-block;
+padding-top:18px;
+padding-bottom: 30px;
+}
+
+footer ul li{
+text-align: center;
+display: inline-block;
+justify-content: center;
+}
+
+footer ul li a{
+font-family: 'SF Pro Display';
+font-size: 10px;
+color:#ff8d00;
+padding:10px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+}
+    /* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media (min-width: 768px) and (max-width: 992px) {
+ .footer-box {
+background : #111111;
+padding-top: 0px;
+}
+.imagen-footer{
+width: 180px;
+padding-bottom: 10px;
+}
+.footer-texto {
+font-family: 'SF Pro Display';
+color:#424653;
+font-size: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.2em;
+text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+padding-left: 2px;
+margin-bottom : 3px;
+}
+.comunidad-texto{
+font-family: 'SF Pro Display';
+padding-top: 3px;
+color: #fff;
+font-size: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.amigos-texto{
+font-family: 'SF Pro Display';
+color:#fff;
+font-size: 11px;
+padding-top: 11px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+.menu-nav-3{
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+
+}
+.icono-social > a {
+color: #ff8d00;
+font-size: 14px;
+font-weight: 500;
+text-transform: uppercase;
+padding: 0 2px;
+}
+.icono-social > a:hover {
+color: #fc6c3f;
+}
+.icono-social > a > i {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid #ff8d00;
+width: 36px;
+height: 36px;
+line-height: 36px;
+}
+.icono-social > a > i:hover {
+display: inline-block;
+font-size: 16px;
+border-radius: 50%;
+border: 1px solid  #fc6c3f;
+width: 36px;
+height: 36px;
+line-height: 36px;
+}
+
+/**/
+footer ul{
+list-style:none;
+margin:0 auto;
+display:inline-block;
+padding-top:18px;
+padding-bottom: 30px;
+}
+
+footer ul li{
+text-align: center;
+display: inline-block;
+justify-content: center;
+}
+
+footer ul li a{
+font-family: 'SF Pro Display';
+font-size: 10px;
+color:#ff8d00;
+padding:10px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+}
+}
+</style>
+<footer class="footer-box">
+    <div class="footer-widget-section">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-2 col-lg-3">
+                </div>
+                <div class="col-sm-8 col-lg-6 ">
+                    <div class="footer-texto">
+                        <div class="">
+                            <img class=" imagen-footer reveal-img-principal"  src={% static 'img/logo/murtao-logo3-3.svg' %}>
+                        </div>
+                        <address class="text-uppercase reveal-descripcion">
+                        En Murtao, hemos investigado y recopilado recetas
+                        antes de que el olvido aniquile sus aromas y grandezas.
+                        Así, cada una de nuestras preparaciones dice hogar,
+                        dice afecto, dice gusto por la vida
+                        y amor por nuestra tierra del sur.
+                        </address>
+                    </div>
+                    <h6 class="comunidad-texto reveal-textoleft ">ÚNETE A NUESTRA PEQUEÑA COMUNIDAD</h6>
+                    <div class="footer-social d-flex reveal-descripcion">
+                        <div class="icono-social">
+                            <a target="_blank" href="https://es-la.facebook.com/Murtao"><i class="fa fa-facebook"></i></a>
+                        </div>
+                        <div class="icono-social">
+                            <a target="_blank" href="https://twitter.com/murtaovaldivia"><i class="fa fa-twitter"></i></a>
+                        </div>
+                        <div class="icono-social">
+                            <a target="_blank" href="https://www.instagram.com/murtao_restoran_valdivia/"><i class="fa fa-instagram"></i></a>
+                        </div>
+                        <div class="icono-social">
+                            <a target="_blank" href="https://www.tripadvisor.cl/Restaurant_Review-g294302-d4088232-Reviews-Murtao_Restoran-Valdivia_Los_Rios_Region.html"><i class="fa fa-tripadvisor"></i></a>
+                        </div>
+                        <div class="icono-social">
+                            <a target="_blank" href="https://plus.google.com/114870683859504801871"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                    </div>
+                    <h6 class="amigos-texto reveal-textoleft">¡ SEAMOS AMIGOS !</h6>
+                </div>
+                </div>
+                <div class="col-sm-2 col-lg-3 ">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-5" >
+
+    <div class="container pt-5" >
+            <div class="container pt-5" >
+
+    </div>
+
+    </div>
+    </div>
+
+    <div class="s-footer__bottom">
+        <div class="row">
+            <div class="col-full">
+                <div class="go-top">
+                    <a class="smoothscroll" title="Ir Arriba" href="#top"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+

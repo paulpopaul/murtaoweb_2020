@@ -1,0 +1,462 @@
+{% load static %}
+<style>
+/*--------------------------------  Nuestra Historia ----*/
+
+.nuestra-historia-box{
+}
+
+.nuestra-historia-titulo{
+color:#fe9b1f;
+}
+
+.nuestra-historia-subbtitulo{
+display: inline;
+font-weight: 700;
+font-size: 12px;
+text-transform: uppercase;
+color: #fff;
+background: #000;
+padding: 3px 8px 5px 8px;
+border: 3px solid #eaeaea;
+}
+
+.linea-header2{
+width: 60px;
+height: 2px;
+background: #f0f0f0;
+}
+
+.nuestra-historia-parrafo-box{
+
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+padding-bottom: 35px;
+}
+.nuestra-historia-parrafo{
+color:#96989f;
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 400;
+font-style: normal;
+}
+
+
+
+/*--------------------------------  IMAGE CONTAINER ----*/
+
+.logo-murtado{
+width: 120px;
+padding-bottom: 1px;
+}
+.image-murta-content {
+width: 300px;
+}
+.box-sobre-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 40px;
+padding-bottom: 18px;
+}
+
+.header-encabezado{
+font-family: 'Futura';
+font-size: 28px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-detalle{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media (min-width: 319px) and (max-width:373px) {
+.logo-murtado{
+width: 80px;
+padding-bottom: 1px;
+}
+.header-encabezado{
+font-family: 'Futura';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-detalle{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.image-murta-box{
+justify-content: center;
+text-align: center;
+padding-bottom: 12px;
+}
+.image-murta-content{
+width: 120px;
+border-radius: 50%;
+
+}
+.box-sobre-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 12px;
+}
+.nuestra-historia-parrafo-box{
+
+padding-bottom: 6px;
+}
+.nuestra-historia-parrafo{
+color:#96989f;
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+text-align: center;
+
+}
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media (min-width:374px) and (max-width: 412px){
+.logo-murtado{
+width: 80px;
+padding-bottom: 1px;
+}
+.header-encabezado{
+font-family: 'Futura';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-detalle{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.image-murta-box{
+justify-content: center;
+text-align: center;
+padding-bottom: 12px;
+}
+.image-murta-content{
+width: 120px;
+border-radius: 50%;
+
+}
+.box-sobre-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 12px;
+}
+.nuestra-historia-parrafo-box{
+color:#96989f;
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+width: 320px;
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+padding-top: 10px;
+    padding-bottom: 4px;
+}
+.nuestra-historia-parrafo{
+color:#96989f;
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+}
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media (min-width: 413px) and (max-width: 767px){
+.logo-murtado{
+width: 80px;
+padding-bottom: 1px;
+}
+.header-encabezado{
+font-family: 'Futura';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-detalle{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.image-murta-box{
+justify-content: center;
+text-align: center;
+padding-bottom: 12px;
+}
+.image-murta-content{
+width: 120px;
+border-radius: 50%;
+
+}
+.box-sobre-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 12px;
+}
+.nuestra-historia-parrafo-box{
+color:#96989f;
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+width: 320px;
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+padding-top: 10px;
+    padding-bottom: 4px;
+}
+.nuestra-historia-parrafo{
+color:#96989f;
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+}
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media (min-width: 768px) and (max-width: 992px) {
+.logo-murtado{
+width: 80px;
+padding-bottom: 1px;
+}
+.header-encabezado{
+font-family: 'Futura';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #000000;
+}
+.header-detalle{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.04em;
+color: #96989f;
+margin-top: -6px;
+}
+.image-murta-box{
+justify-content: center;
+text-align: center;
+padding-bottom: 12px;
+}
+.image-murta-content{
+width: 120px;
+border-radius: 50%;
+
+}
+.box-sobre-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 12px;
+}
+.nuestra-historia-parrafo-box{
+color:#96989f;
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+width: 500px;
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+padding-top: 10px;
+    padding-bottom: 4px;
+}
+.nuestra-historia-parrafo{
+color:#96989f;
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+}
+}
+
+
+.nuestra-historia-parrafo-murta{
+
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 600;
+font-style: normal;
+color:#e8163f;
+}
+
+.nuestra-historia-parrafo{
+color:#6f7070;
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 400;
+font-style: normal;
+}
+
+
+.nuestra-historia-parrafo-murtado{
+
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 600;
+font-style: normal;
+color:#000;
+}
+.nuestra-historia-parrafo-lanco{
+
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 600;
+font-style: normal;
+color:#636687;
+}
+
+.nuestra-historia-parrafo-victoria{
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 600;
+font-style: normal;
+color:#e4b760;
+}
+
+.nuestra-historia-parrafo-charles{
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 600;
+font-style: normal;
+color:#379640;
+}
+
+.nuestra-historia-parrafo-mapuche{
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 600;
+font-style: normal;
+color:#000;
+}
+.nuestra-historia-parrafo-bienvenidos{
+font-family: 'SF Pro Display';
+font-size: 15px;
+font-weight: 600;
+font-style: normal;
+color:#fe9b1f;
+    text-align: center;
+}
+
+</style>
+<div class="container" id="menu-nosotros">
+            <div class="row">
+            <div class="colmd-12 col-12 box-sobre-titulo ">
+                <img class="justify-content-center logo-murtado reveal-img-principal" src={% static 'img/logo/murtao-logo4.svg' %}>
+                <h6 class="header-encabezado reveal-titulo">Nuestra Historia</h6>
+                <h6 class="header-detalle reveal-textoleft">¿Quiénes Somos?</h6>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-lg-3 col-12 why-choose-us-img image-murta-box">
+            <img class="image-murta-content reveal-imagenmurta"  src={% static 'img/img/image-murta.jpg' %}>
+            <!--<img class="image-murta-content " src={% static 'img/img/image-murta2.jpg' %}>-->
+        </div>
+        <div class="col-lg-6 col-12 ">
+            <div class="nuestra-historia-parrafo-box">
+
+                <p class="nuestra-historia-parrafo reveal-textoleft">La <a href="https://es.wikipedia.org/wiki/Ugni_molinae" class="nuestra-historia-parrafo-murta">murta o murtila</a> - así llamada al norte de Lanco -
+                el berry nativo del sur de Chile, es el mismo fruto que
+                    fascinaba a la reina allá en el siglo XIX,
+                y que habría llegado hasta la realeza británica
+                    a través de Charles Darwin,
+                    luego de su paso por estos lares.</p>
+                <h6 class="nuestra-historia-parrafo reveal-textoleft">Su nombre científico encierra dos claves:
+                    el vocablo mapucheuñi, con el cual los indígenas
+                designaban esta planta y molinae, que hace referencia
+                al Albate Molina, sabio chileno que la describió
+                por primera vez en 1782.</h6>
+                <h6 class="nuestra-historia-parrafo reveal-textoleft">Desde siempre, su baya ha sido usada
+                ampliamente en gastronomía,
+                especialmente para la repostería sureña,
+                como el exquisito kuchen de murta,
+                la famosa conserva artesanal de murta con membrillo
+                y el tradicional licor ‘’murtao’’ (o murtado).</h6>
+                <h6 class="nuestra-historia-parrafo reveal-textoleft">En Murtao, hemos investigado y recopilado recetas
+                antes de que el olvido aniquile sus aromas y grandezas.
+                Así, cada una de nuestras preparaciones dice hogar,
+                dice afecto, dice gusto por la vida
+                y amor por nuestra tierra del sur.</h6>
+                <h6 class="nuestra-historia-parrafo-bienvenidos reveal-textoleft"> Bienvenidos
+                a un restorán con la calidez de la gente del sur!</h6>
+                    <hr>
+                    <button class="alert alert-danger">Atención !</button>
+                <h6 class="nuestra-historia-parrafo reveal-textoleft ">Para que te sigas cuidando y sigas disfrutando de los sabores de sur en tu casa , Murtao restorán abre su cocina y bar todos los fines de semana…
+                        <br>
+                    Programa tu pedido para el fin de semana llamando al whatsapp +56994040267 o al mail murtaovaldivia@gmail.com
+                    <br>
+                    Y haz tu retiro en el local los días
+                    
+                    Jueves, Viernes y sábados de 17:00 a 20:30 horas y Domingos de 11 a 15:30 horas
+                    
+                  </h6>
+
+            </div>
+        </div>
+
+          <div class="col-md-3 why-choose-us-img d-none d-lg-block">
+            <img class="image-murta-content reveal-imagenmurta" src={% static 'img/img/image-murt3.jpg' %}>
+
+            <!--<img class="image-murta-content" src={% static 'img/img/image-murtado.jpg' %}>-->
+
+        </div>
+
+    </div>
+</div>

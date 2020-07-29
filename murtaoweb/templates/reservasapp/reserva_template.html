@@ -1,0 +1,8 @@
+
+
+{% for reserva in object_list %}
+<h1><a href="/email/{{ object_list.slug }}">{{ reserva.nombre_persona }}</a></h1>
+    <p>{{ nombre_persona }} {{ email }} {{ fecha_evento }} {{ hora_evento }} {{ numeros_invitados }} {{ telefono_invitado }} {{ mensaje_evento }}<p>
+<p>{{ object_list.hora_evento }}</p>
+
+  {% endfor %}

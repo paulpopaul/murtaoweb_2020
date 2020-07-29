@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="Es">
+<head>
+<!-- %{ S.F/S/KEY }% -->
+{% load static %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135482848-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135482848-1');
+</script>
+
+
+<!-- %{ Meta/S.E.O }% -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Murtao Restorán | CL</title>
+<!-- %{ CSS }% -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+<link rel="stylesheet" href="{% static 'css/instaapp/owl.carousel.css' %}">
+<link rel="stylesheet" href="{% static 'css/ultimate.css' %}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+<!-- %{ JS }% -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/smooth-scroll.polyfills.min.js' %}"></script>
+<script src="{% static 'js/gijgo.js' %}"></script>
+<script src="{% static 'js/instaapp/owl.carousel.js' %}"></script>
+
+</head>
+<body>
+<!-- %{ Include: Header }% -->
+{% include 'header/header_base.html'%}
+<!-- %{ Include: About }% -->
+{% include 'sobrenosotros/sobre_base.html' %}
+<!-- %{ Include: Eventos App }% -->
+{% include 'eventosapp/evento_base.html' %}
+<!-- %{ Include: Reservas App }% -->
+<!-- %{% include 'reservasapp/reserva_base.html' %}% -->
+<!-- %{ Include: Menú App }% -->
+<!--{% include 'menuapp/menu_base.html' %}-->
+<!-- %{ Include: CARTA App }% -->
+{% include 'cartaapp/carta_base.html' %}
+<!-- %{ Include: Galería App }% -->
+{% include 'galeriaapp/galeria_base.html' %}
+<!-- %{ Include: Blog App }% -->
+{% include 'blogapp/blog_base.html' %}
+<!-- %{ Include: Horarios }% -->
+{% include 'contactoapp/contacto_template.html' %}
+<!-- %{ Include: Mapa }% -->
+{% include 'mapaapp/mapa_base.html' %}
+<!-- %{ Include: Suscripción App }% -->
+{% include 'suscripcionapp/suscripcion_base.html' %}
+<!-- %{ Include: Instagram App }% -->
+{% include 'instaapp/insta_base.html' %}
+<!-- %{ Include: Footer }% -->
+{% include 'footer/footer_base.html' %}
+</body>
+</html>
+<!--<script>
+ScrollReveal().reveal('.reveal-menuuno',{
+origin   : 'top',
+delay    :  50,
+distance : '100px',
+easing   : 'ease-in-out',
+duration : 2000,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-menudos',{
+origin   : 'top',
+delay    :  50,
+distance : '100px',
+easing   : 'ease-in-out',
+duration : 2000,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-logomurtao',{
+origin   : 'top',
+delay    : 50,
+distance : '100px',
+easing   : 'ease-in-out',
+duration : 1200,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-ubicacionmurtao',{
+origin   : 'bottom',
+delay    :  50,
+distance : '100px',
+easing   : 'ease-in-out',
+duration : 1000,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-menutres',{
+origin   : 'bottom',
+delay    :  50,
+distance : '100px',
+easing   : 'ease-in-out',
+duration : 2000,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-img-principal',{
+origin   : 'top',
+delay    :  50,
+distance : '20px',
+easing   : 'ease-in-out',
+duration : 1000,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-titulo',{
+origin   : 'top',
+delay    :  50,
+distance : '20px',
+easing   : 'ease-in-out',
+duration : 1000,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-descripcion',{
+origin   : 'bottom',
+delay    : 50,
+distance : '20px',
+easing   : 'ease-in-out',
+duration : 1000,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-imagenmurta',{
+origin   : 'bottom',
+delay    :  50,
+distance : '20px',
+easing   : 'ease-in-out',
+duration : 1000,
+interval : 50
+
+});
+ScrollReveal().reveal('.reveal-textoleft',{
+origin   : 'left',
+delay    :  50,
+distance : '20px',
+easing   : 'ease-in-out',
+duration : 1000,
+interval : 50
+});
+ScrollReveal().reveal('.reveal-textoright',{
+origin   : 'right',
+delay    :  100,
+distance : '20px',
+easing   : 'ease-in-out',
+duration : 1000,
+interval : 100
+});
+ScrollReveal().reveal('.reveal-textobottom',{
+origin   : 'bottom',
+delay    :  100,
+distance : '20px',
+easing   : 'ease-in-out',
+duration : 1000,
+interval : 100
+});
+</script>-->

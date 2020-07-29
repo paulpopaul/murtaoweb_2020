@@ -1,0 +1,10 @@
+{% block content %}
+    <img src="{{ menus.imagen.url }}">
+    <h1>{{ menus.titulo }}</h1>
+    <h1>{{ menus.contenido }}</h1>
+    <h1>{{ menus.valor }}</h1>
+    <h6><a href="{% url 'menuapp:menu_category' slug=menus.categoria.slug %}">{{ menus.categoria }}</a></h6>
+{% endblock %}
+
+
+{{ nombre }} {{ apellido }} {{ celular }} {{ email }} {{ mensaje }}

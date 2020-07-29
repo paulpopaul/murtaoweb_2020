@@ -1,0 +1,426 @@
+{% load thumbnail %}
+{% load static %}
+<style>
+.post-box-contenedor{
+height: 390px;
+padding: 14px;
+border-radius: 12px;
+border:1px solid #f4f2ed;
+}
+.date-feature {
+background: #20202f none repeat scroll 0 0;
+border-radius: 17px;
+color: #ffffff;
+font-family: "Quicksand", sans-serif;
+font-size: 24px;
+font-weight: 700;
+height: 78px;
+padding: 12px 5px;
+position: absolute;
+right: 20px;
+text-align: center;
+top: 20px;
+width: 78px;
+z-index: 1;
+}
+img {
+max-width: 100%;
+}
+.post-thumb img {
+border-radius: 12px;
+}
+.post-meta {
+-webkit-box-align: center;
+-ms-flex-align: center;
+-ms-grid-row-align: center;
+align-items: center;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: space-between;
+}
+.post-author a,
+.post-date a,
+.post-favourite a,
+.post-comments a,
+.post-share a {
+color: #96989f;
+font-size: 12px;
+}
+.post-author a:hover,
+.post-date a:hover,
+.post-favourite a:hover,
+.post-comments a:hover,
+.post-share a:hover {
+color: #000;
+}
+.post-favourite a,
+.post-comments a {
+margin-right: 15px;
+}
+.post-author a {
+margin-right: 15px;
+position: relative;
+z-index: 1;
+}
+.single-post {
+margin-bottom: 30px;
+}
+.single-post h4 {
+margin: 10px 0;
+color: #000;
+-webkit-transition-duration: 500ms;
+transition-duration: 500ms;
+font-size: 24px;
+font-weight: 600;
+}
+.single-post p {
+color: #96989f;
+font-size: 12px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-blog-box{
+text-align: center;
+padding-top: 20px;
+padding-bottom: 44px;
+}
+.enlace-blog-vertodo{
+font-family: 'SF Pro Display';
+display: inline-block;
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #e4b760;
+}
+.enlace-blog-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+
+.owl-theme .owl-nav .owl-prev {
+background: url("../static/img/blogapp/arrow-left-active.png") no-repeat center center;
+float: left;
+height: 50px;
+left: -90px;
+width: 50px;
+top: 40%;
+-webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
+text-indent: -10000px;
+position: absolute;
+}
+.owl-theme .owl-nav .owl-prev:hover {
+background: url("../static/img/blogapp/arrow-left-active.png") no-repeat center center;
+}
+.owl-theme .owl-nav .owl-next {
+background: url("../static/img/blogapp/arrow-right-active.png") no-repeat center center;
+float: left;
+height: 50px;
+right: -90px;
+width: 50px;
+top: 40%;
+-webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
+text-indent: -10000px;
+position: absolute;
+}
+.owl-theme .owl-nav .owl-next:hover {
+background: url("../static/img/blogapp/arrow-right-active.png") no-repeat center center;
+}
+.read-more {
+font-family: 'SF Pro Display';
+font-size: 10px;
+font-weight: 600;
+border: 2px solid #e8163f;
+color: #fff;
+border-radius: 6px;
+width: 120px;
+margin-right: auto;
+margin-left: auto;
+height: 32px;
+text-align: center;
+background: #e8163f;
+line-height: 14px;
+}
+.box-noticia-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 22px;
+padding-bottom: 18px;
+}
+.titulo-blog{
+font-size: 20px;
+color: #000000;
+padding-top: 12px;
+font-weight: 600;
+}
+
+.contenido-blog{
+font-size: 10px;
+}
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media (min-width: 319px) and (max-width:373px) {
+.post-box-contenedor{
+height: 370px;
+padding: 12px;
+border-radius: 12px;
+border:1px solid #f4f2ed;
+}
+.titulo-blog{
+font-size: 18px;
+color: #000000;
+padding-top: 8px;
+font-weight: 600;
+}
+.contenido-blog{
+font-size: 10px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-blog-box{
+text-align: center;
+padding-top: 0px;
+padding-bottom: 22px;
+}
+.enlace-blog-vertodo{
+font-family: 'SF Pro Display';
+display: inline-block;
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+}
+.enlace-blog-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media (min-width:374px) and (max-width: 412px){
+.post-box-contenedor{
+height: 364px;
+padding: 12px;
+border-radius: 12px;
+border:1px solid #f4f2ed;
+}
+.titulo-blog{
+font-size: 18px;
+color: #000000;
+padding-top: 8px;
+font-weight: 600;
+}
+.contenido-blog{
+font-size: 10px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-blog-box{
+text-align: center;
+padding-top: 0;
+padding-bottom: 22px;
+}
+.enlace-blog-vertodo{
+font-family: 'SF Pro Display';
+display: inline-block;
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+}
+.enlace-blog-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+}
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media (min-width: 413px) and (max-width: 767px){
+    .post-box-contenedor{
+height: 390px;
+padding: 12px;
+border-radius: 12px;
+border:1px solid #f4f2ed;
+}
+.titulo-blog{
+font-size: 20px;
+color: #000000;
+padding-top: 12px;
+font-weight: 600;
+}
+.contenido-blog{
+font-size: 12px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-blog-box{
+text-align: center;
+padding-top: 0px;
+padding-bottom: 22px;
+}
+.enlace-blog-vertodo{
+font-family: 'SF Pro Display';
+display: inline-block;
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+}
+.enlace-blog-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+}
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media (min-width: 768px) and (max-width: 992px){
+.post-box-contenedor{
+height: 390px;
+padding: 12px;
+border-radius: 12px;
+border:1px solid #f4f2ed;
+}
+.titulo-blog{
+font-size: 20px;
+color: #000000;
+padding-top: 12px;
+font-weight: 600;
+}
+.contenido-blog{
+font-size: 12px;
+}
+/*--------------------------------  ENLACE TODOS LOS SHOWS ----*/
+.enlace-blog-box{
+text-align: center;
+padding-top: 0;
+padding-bottom: 22px;
+}
+.enlace-blog-vertodo{
+font-family: 'SF Pro Display';
+display: inline-block;
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #96989f;
+}
+.enlace-blog-vertodo:hover{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+color: #54175e;
+text-decoration: none;
+}
+}
+</style>
+{% block content %}
+<div class="container-fluid box-blog" id="menu-blog">
+    <div class="container">
+    <div class="row">
+            <div class="colmd-12 col-12 box-noticia-titulo">
+                <img class="justify-content-center logo-murtado reveal-img-principal" src={% static 'img/logo/murtao-logo4.svg' %}>
+                <h6 class="header-evento reveal-titulo">Blog & Noticias</h6>
+                <h6 class="header-descripcion reveal-descripcion">recetas, promociones y novedades</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="owl-carousel owl-theme reveal-textoleft" data-autoplay="true" data-speed="1800" data-autotime="5000">
+                {% for obj in post_list %}
+                    <!-- %{ for }% -->
+                    <div class="item post-box-contenedor">
+                        <div class="single-post wow fadeInUp" data-wow-delay="1s">
+                            <div class="post-thumb">
+                                <img src="{{ obj.imagen_blog|thumbnail_url:'blog' }}">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta d-flex">
+                                    <div class="post-author-date-area d-flex">
+                                        <div class="post-author">
+                                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> {{ obj.fecha_blog|date:"d"}} de {{ obj.fecha_blog|date:"F"}}</a>
+                                        </div>
+                                        <div class="post-date">
+                                            <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ obj.hora_blog }} {{ obj.hora_blog|date:"A" }}</a>
+                                        </div>
+                                    </div>
+                                    <div class="post-comment-share-area d-flex">
+                                        <div class="post-favourite">
+                                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 10</a>
+                                        </div>
+                                        <div class="post-comments">
+                                            <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 12</a>
+                                        </div>
+                                        <div class="post-share">
+                                            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="{% url 'blogapp:blog_detail' slug=obj.slug %}">
+                                    <h6 class="titulo-blog">{{ obj.titulo }}</h6>
+                                </a>
+                                <p class="contenido-blog">{{ obj.contenido|truncatechars:100 }}</p>
+                                <div class="container-boton">
+                                    <a href="{% url 'blogapp:blog_detail' slug=obj.slug %}" class="btn read-more">Continuar Leyendo <span class="fa fa-long-arrow-right fa-1x"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 enlace-blog-box">
+                <a href="{% url 'blogapp:blog_list' %}" class="enlace-blog-vertodo"> <span class="fa fa-long-arrow-right fa-1x"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<script>
+$('.owl-carousel').each(function() {
+var owl = $('.owl-carousel');
+$(this).owlCarousel({
+margin: 15,
+loop: true,
+autoplayTimeout: $(this).data('autotime'),
+smartSpeed: $(this).data('speed'),
+autoplay: $(this).data('autoplay'),
+item: $(this).data('carousel-items'),
+nav: false,
+dots: $(this).data('dots'),
+responsive:{
+320: {
+items: 1,
+margin: 15
+},
+768: {
+items: 2,
+margin: 15
+},
+992: {
+items: $(this).data('laptop')
+},
+1200: {
+items: $(this).data('items')
+}
+}
+});
+});
+</script>

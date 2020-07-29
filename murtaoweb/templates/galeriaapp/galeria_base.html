@@ -1,0 +1,201 @@
+{% load thumbnail %}
+{% load static %}
+<style>
+
+.box-galeria{
+padding: 12px;
+
+background: #f4f2ed;
+border-radius: 12px;
+height: 194px;
+}
+.box-galeria2{
+padding: 2px;
+}
+
+.galeriaapp > ul > li a {
+border-radius: 12px;
+display: block;
+overflow: hidden;
+position: relative;
+float: left;
+}
+.galeriaapp > ul > li a > img {
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+-webkit-transition-duration: 500ms;
+transition-duration: 500ms;
+}
+.galeriaapp > ul > li a:hover > img {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+opacity: .5;
+}
+.galeriaapp > ul > li a:hover .icono-zoom > span {
+opacity: 1;
+-webkit-transition-duration: 500ms;
+transition-duration: 500ms;
+}
+.galeriaapp > ul > li a .icono-zoom {
+background-color: rgba(0, 0, 0, 0.1);
+bottom: 0;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+}
+.galeriaapp > ul > li a .icono-zoom > span {
+left: 50%;
+margin-left: -10px;
+margin-top: -10px;
+opacity: 0;
+position: absolute;
+top: 50%;
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+-webkit-transition-duration: 500ms;
+transition-duration: 500ms;
+}
+.galeriaapp > ul > li a:hover .icono-zoom {
+background: rgba(255, 141, 0, 0.4);
+}
+.galeriaapp.dark > ul > li a {
+border: 3px solid #04070a;
+}
+
+.box-galeria-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-bottom: 18px;
+
+}
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media (min-width: 319px) and (max-width:373px){
+.box-galeria{
+padding: 0;
+
+background: #f4f2ed;
+border-radius: 12px;
+height: 0px;
+}
+
+.box-galeria-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 12px;
+padding-bottom: 18px;
+}
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media (min-width:374px) and (max-width: 412px){
+.box-galeria{
+padding: 0;
+
+background: #f4f2ed;
+border-radius: 12px;
+height: 0px;
+}
+.box-galeria-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 12px;
+padding-bottom: 18px;
+}
+}
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media (min-width: 413px) and (max-width: 767px){
+    .box-galeria{
+padding: 0;
+
+background: #f4f2ed;
+border-radius: 12px;
+height: 0px;
+}
+.box-galeria-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 12px;
+padding-bottom: 18px;
+}
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media (min-width: 768px) and (max-width: 992px) {
+.box-galeria{
+padding: 0;
+
+background: #f4f2ed;
+border-radius: 12px;
+height: 0px;
+}
+.box-galeria-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 12px;
+padding-bottom: 18px;
+}
+}
+
+</style>
+<div class="container" id="menu-galeriass">
+    <div class="row">
+        <div class="col-md-12 col-12 box-galeria-titulo">
+            <img class="justify-content-center logo-murtado reveal-img-principal" src={% static 'img/logo/murtao-logo4.svg' %}>
+            <h6 class="header-evento reveal-titulo">Galería de Imágenes</h6>
+            <h6 class="header-descripcion reveal-descripcion">un lugar familiar, cálido y acogedor</h6>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="{% static 'css/galeriaapp/lightgallery.css' %}">
+<div class="container galeriaapp reveal-textoleft">
+    <ul id="lightgallery3" class="list-unstyled row">
+        {% for obj in img %}
+            <!-- %{ for }% -->
+            <li class="col-3  box-galeria2" data-responsive="{{ obj.imagen.url }} 375, {{ obj.imagen.url }} 480, {{ obj.imagen.url }} 800" data-src="{{ obj.imagen.url }}" data-sub-html="<h4>{{ obj.titulo }}</h4><p>{{ obj.descripcion }}</p>" data-pinterest-text="Pin it1" data-tweet-text="compartir en twitter">
+                <div class="box-galeria ">
+                <a href="#" class="">
+                    <img class="img-responsive" src="{{ obj.imagen|thumbnail_url:'galeria' }}" alt="Thumb-2">
+                    <div class="icono-zoom">
+                        <span class="iconos-nav-principal-sociales fa fa-search-plus fa-1x"></span>
+                    </div>
+                </a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+<script src="{% static 'js/galeriaapp/lightgallery.js' %}"></script>
+<script src="{% static 'js/galeriaapp/lg-pager.js' %}"></script>
+<script src="{% static 'js/galeriaapp/lg-autoplay.js' %}"></script>
+<script src="{% static 'js/galeriaapp/lg-fullscreen.js' %}"></script>
+<script src="{% static 'js/galeriaapp/lg-zoom.js' %}"></script>
+<script src="{% static 'js/galeriaapp/lg-hash.js' %}"></script>
+<script src="{% static 'js/galeriaapp/lg-share.js' %}"></script>
+
+
+<script type="text/javascript">
+lightGallery(document.getElementById('lightgallery1'), {
+galleryId: 1,
+}); 
+lightGallery(document.getElementById('lightgallery2'), {
+galleryId: 2,
+}); 
+lightGallery(document.getElementById('lightgallery3'), {
+galleryId: 3,
+}); 
+</script>

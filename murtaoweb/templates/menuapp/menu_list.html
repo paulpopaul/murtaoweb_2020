@@ -1,0 +1,313 @@
+    {% load staticfiles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ultimate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+<script src="{% static 'js/jquery.js' %}"></script>
+{% block content %}
+
+
+<div class="container">
+    <h1>Menu</h1><br>
+    <div class="row">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+            {% for obj in menu1 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link active" id="{{ obj.categoria }}" data-toggle="pill" href="#cat1" role="tab" aria-controls="Cat1" aria-selected="true">{{ obj.titulo }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% for obj in cat2 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat2" role="tab" aria-controls="Cat2" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat3 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat3" role="tab" aria-controls="Cat3" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat4 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat4" role="tab" aria-controls="Cat4" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat5 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat5" role="tab" aria-controls="Cat5" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% for obj in cat6 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat6" role="tab" aria-controls="Cat6" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat7 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat7" role="tab" aria-controls="Cat7" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat8 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat8" role="tab" aria-controls="Cat8" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat9 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat9" role="tab" aria-controls="Cat9" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for obj in cat10 %}
+                {% if forloop.first %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ obj.categoria }}" data-toggle="pill" href="#cat10" role="tab" aria-controls="Cat10" aria-selected="false">{{ obj.categoria }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="cat1" role="tabpanel" aria-labelledby="Cat1-tab">
+
+                {% for obj in menu1 %}
+                    {% if obj.estado == 'Publicado' %}
+                        <div class="row">
+                            {% for obj in cat1 %}
+                            <div class="col-md-4">
+                                <div class="d-flex flex-row border rounded">
+                                    <div class="p-1 ">
+                                        <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                                    </div>
+                                    <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                            <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                            <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                                    </div>
+                                    <div class="">
+                                        <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+            {% endfor %}
+            </div>
+
+            <div class="tab-pane fade" id="cat2" role="tabpanel" aria-labelledby="Cat2-tab">
+                <div class="row">
+                    {% for obj in cat2 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cat3" role="tabpanel" aria-labelledby="Cat3-tab">
+                <div class="row">
+                    {% for obj in cat3 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cat4" role="tabpanel" aria-labelledby="Cat4-tab">
+                <div class="row">
+                    {% for obj in cat4 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cat5" role="tabpanel" aria-labelledby="Cat5-tab">
+                <div class="row">
+                    {% for obj in cat5 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cat6" role="tabpanel" aria-labelledby="Cat6-tab">
+                <div class="row">
+                    {% for obj in cat6 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cat7" role="tabpanel" aria-labelledby="Cat7-tab">
+                <div class="row">
+                    {% for obj in cat7 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cat8" role="tabpanel" aria-labelledby="Cat8-tab">
+                <div class="row">
+                    {% for obj in cat8 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cat9" role="tabpanel" aria-labelledby="Cat9-tab">
+                <div class="row">
+                    {% for obj in cat9 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cat10" role="tabpanel" aria-labelledby="Cat10-tab">
+                <div class="row">
+                    {% for obj in cat10 %}
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row border rounded">
+                            <div class="p-1 ">
+                                <img src="{{ obj.imagen.url }}" class="rounded-circle border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
+                                    <h6><a href="{% url 'menuapp:menu_detail' slug=obj.slug %}">{{ obj.titulo }}</a></h6>
+                                    <p style="font-size: 10px; color: gray" class="">{{ obj.contenido }}</p>
+                            </div>
+                            <div class="">
+                                <span class="badge badge-warning text-right mb-5">{{ obj.valor }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+{% endblock %}

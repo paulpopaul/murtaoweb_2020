@@ -1,0 +1,594 @@
+{% load static %}
+<style>
+/*--------------------------------  FORM CONTACTO ----*/
+.contacto-box{
+background: #f4f2ed;
+
+    padding-bottom: 60px;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.contacto-box-dos{
+background: #f4f2ed;
+border-radius: 12px;
+border:1px solid #eceef0;
+}
+.box-contacto-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 32px;
+padding-bottom: 20px;
+}
+
+
+.contacto-header{
+font-family: 'SF Pro Display';
+font-size: 28px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.contacto-descripcion{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+color: #96989f;
+margin-top: -6px;
+}
+
+.contacto-form-box .form-control {
+height: 46px;
+
+box-shadow: none;
+font-size: 16px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+border-radius: 4px;
+border: 1px solid #eceef0;
+background: #fff;
+color: #000000;
+-webkit-transition: .3s all ease-out;
+transition: .3s all ease-out;
+}
+
+.contacto-form-box .form-control:active, .contacto-form-box .form-control:focus {
+-webkit-box-shadow: none;
+box-shadow: none;
+border-color: #ff8d00;
+}
+
+.contacto-form-box textarea.form-control {
+height: inherit;
+resize: vertical;
+}
+
+.btn2 {
+border: none;
+border-radius: 4px;
+padding-top: 14px;
+padding-bottom: 14px;
+padding-left: 16px;
+padding-right: 16px;
+letter-spacing: .1em;
+-webkit-transition: .3s all ease-in;
+transition: .3s all ease-in;
+}
+
+.btn2.btn-primary2 {
+border: 2px solid #e8163f;
+background: #e8163f;
+font-family: 'SF Pro Display';
+color:#ffffff;
+font-size: 12px;
+font-weight: 400;
+}
+.btn2.btn-primary2:hover, .btn2.btn-primary2:active, .btn2.btn-primary2:focus {
+background: #672d56;
+color: #ffffff;
+border: 2px solid #672d56;
+}
+.btn2.btn-primary2:focus, .btn2.btn-primary2:active {
+outline: none;
+border: 2px solid #e8163f;
+}
+.nombre-label{
+font-family: 'SF Pro Display';
+color:#111111;
+font-weight: 600;
+}
+.iconos-formulario{
+color: #ff8d00;
+
+}
+.texto-formulario{
+color: #96989f;
+font-size: 16px;
+font-weight: 400;
+font-style: normal;
+}
+
+.iconos-formulario-dos{
+border-radius: 50%;
+color: #ff8d00;
+background:#dee2e6;
+width: 60px;
+height: 60px;
+line-height: 60px;
+}
+
+.encabezado-formulario{
+color: #111111;
+
+}
+.input-group-text{
+background: #dee2e6;
+border: 1px solid #eceef0;
+}
+
+.side-icon-boxes{
+text-align: center;
+}
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media (min-width: 319px) and (max-width:373px) {
+
+    .contacto-box{
+background: #f4f2ed;
+
+    padding-bottom: 2px;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+    .box-contacto-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 16px;
+padding-bottom: 0px;
+}
+
+.contacto-header{
+font-family: 'SF Pro Display';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.contacto-descripcion{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+color: #96989f;
+margin-top: -6px;
+}
+.nombre-label{
+color: #212529;
+font-weight: 600;
+padding-top: 12px;
+font-size: 12px;
+padding-left: 2px;
+}
+.contacto-form-box .form-control {
+height: 46px;
+
+box-shadow: none;
+font-size: 12px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+border-radius: 4px;
+border: 1px solid #eceef0;
+background: #fff;
+color: #000000;
+-webkit-transition: .3s all ease-out;
+transition: .3s all ease-out;
+}
+.encabezado-formulario{
+color: #111111;
+font-size: 12px;
+}
+.texto-formulario{
+color: #96989f;
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+}
+.iconos-formulario-dos{
+border-radius: 50%;
+color: #ff8d00;
+background:#f4f2ed;
+width: 36px;
+height: 36px;
+line-height: 36px;
+    border: 1px solid #dee2e6;
+
+}
+.icon-formularios-2000{
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+@media (min-width:374px) and (max-width: 412px){
+.contacto-box{
+background: #f4f2ed;
+
+padding-bottom: 2px;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.box-contacto-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 16px;
+padding-bottom: 0px;
+}
+
+.contacto-header{
+font-family: 'SF Pro Display';
+font-size: 22px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.contacto-descripcion{
+font-family: 'SF Pro Display';
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+color: #96989f;
+margin-top: -6px;
+}
+.nombre-label{
+color: #212529;
+font-weight: 600;
+padding-top: 12px;
+font-size: 12px;
+padding-left: 2px;
+}
+.contacto-form-box .form-control {
+height: 46px;
+
+box-shadow: none;
+font-size: 12px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+border-radius: 4px;
+border: 1px solid #eceef0;
+background: #fff;
+color: #000000;
+-webkit-transition: .3s all ease-out;
+transition: .3s all ease-out;
+}
+.encabezado-formulario{
+color: #111111;
+font-size: 12px;
+}
+.texto-formulario{
+color: #96989f;
+font-size: 12px;
+font-weight: 400;
+font-style: normal;
+}
+.iconos-formulario-dos{
+border-radius: 50%;
+color: #ff8d00;
+background:#f4f2ed;
+width: 36px;
+height: 36px;
+line-height: 36px;
+border: 1px solid #dee2e6;
+
+}
+.icon-formularios-2000{
+padding-top: 25px;
+padding-bottom: 5px;
+}
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media (min-width: 413px) and (max-width: 767px){
+.contacto-box{
+background: #f4f2ed;
+padding-bottom: 2px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.box-contacto-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 16px;
+padding-bottom: 0px;
+}
+
+.contacto-header{
+font-family: 'SF Pro Display';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.contacto-descripcion{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+color: #96989f;
+margin-top: -6px;
+}
+.nombre-label{
+color: #212529;
+font-weight: 600;
+padding-top: 12px;
+font-size: 14px;
+padding-left: 2px;
+}
+.contacto-form-box .form-control {
+height: 46px;
+
+box-shadow: none;
+font-size: 12px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+border-radius: 4px;
+border: 1px solid #eceef0;
+background: #fff;
+color: #000000;
+-webkit-transition: .3s all ease-out;
+transition: .3s all ease-out;
+}
+.encabezado-formulario{
+color: #111111;
+font-size: 14px;
+}
+.texto-formulario{
+color: #96989f;
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+}
+.iconos-formulario-dos{
+border-radius: 50%;
+color: #ff8d00;
+background:#f4f2ed;
+width: 36px;
+height: 36px;
+line-height: 36px;
+border: 1px solid #dee2e6;
+
+}
+.icon-formularios-2000{
+padding-top: 25px;
+padding-bottom: 5px;
+}
+}
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+@media (min-width: 768px) and (max-width: 992px) {
+.contacto-box{
+background: #f4f2ed;
+padding-bottom: 2px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.box-contacto-titulo{
+text-align: center;
+vertical-align: middle;
+margin: 0 auto;
+justify-content: center;
+padding-top: 16px;
+padding-bottom: 0px;
+}
+.contacto-header{
+font-family: 'SF Pro Display';
+font-size: 24px;
+font-weight: 800;
+font-style: normal;
+letter-spacing:0.04em;
+color: #111111;
+}
+.contacto-descripcion{
+font-family: 'SF Pro Display';
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing:0.1em;
+color: #96989f;
+margin-top: -6px;
+}
+.nombre-label{
+color: #212529;
+font-weight: 600;
+padding-top: 12px;
+font-size: 14px;
+padding-left: 2px;
+}
+.contacto-form-box .form-control {
+height: 46px;
+box-shadow: none;
+font-size: 12px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+border-radius: 4px;
+border: 1px solid #eceef0;
+background: #fff;
+color: #000000;
+-webkit-transition: .3s all ease-out;
+transition: .3s all ease-out;
+}
+.encabezado-formulario{
+color: #111111;
+font-size: 14px;
+}
+.texto-formulario{
+color: #96989f;
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+}
+.iconos-formulario-dos{
+border-radius: 50%;
+color: #ff8d00;
+background:#f4f2ed;
+width: 36px;
+height: 36px;
+line-height: 36px;
+border: 1px solid #dee2e6;
+}
+.icon-formularios-2000{
+padding-top: 25px;
+padding-bottom: 5px;
+}
+}
+
+</style>
+<div class="container-fluid contacto-box" id="menu-contacto">
+<div class="container contacto-box-dos ">
+    <div class="row">
+        <div class="colmd-12 col-12 box-contacto-titulo">
+            <img class="justify-content-center logo-murtado reveal-img-principal" src={% static 'img/logo/murtao-logo4-6.svg' %}>
+            <h6 class="contacto-header reveal-titulo">Contáctanos</h6>
+            <h6 class="contacto-descripcion reveal-textoleft">Atendemos dudas, comentarios y sugerencias</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 reveal-textoleft">
+
+            {% if contact.is_valid == False %}
+            <form action="" method="post" class="contacto-form-box">
+            {% csrf_token %}
+                <div class="form-group" id="contacto">
+                    <div class="row">
+
+                        <div class="col-md-6 col-6">
+                            <label class="nombre-label">Nombre:</label>
+                            <div class="input-group">
+
+                                {{ contact.nombre.errors }}
+                                {{ contact.nombre }}
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-pencil iconos-formulario"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-6">
+                            <label class="nombre-label">Apellido:</label>
+                            <div class="input-group">
+                                {{ contact.apellido.errors }}
+                                {{ contact.apellido }}
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-pencil iconos-formulario"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-6">
+                            <label class="nombre-label">Email:</label>
+                            <div class="input-group">
+
+                                {{ contact.email.errors }}
+                                {{ contact.email }}
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-envelope iconos-formulario"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-6">
+                            <label class="nombre-label">Teléfono:</label>
+                            <div class="input-group">
+                                {{ contact.celular.errors }}
+                                {{ contact.celular }}
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-phone iconos-formulario"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="nombre-label">Mensaje:</label>
+                            <div class="input-group">
+                                {{ contact.mensaje.errors }}
+                                {{ contact.mensaje }}
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-comment-o iconos-formulario"></i></div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            <button type="submit" class="btn2 btn-primary2 d-left">Enviar</button>
+            </form>
+            {% elif contact.is_valid == True %}
+                <h3 class="title center-align">'Mensaje enviado :)'</h3>
+            {% else %}
+                <script>
+                    function contacto() {
+                        window.location = "enviando/";
+                    }
+                    setTimeout("contacto()", 1);
+                </script>
+            {% endif %}
+        </div>
+        <div class="col-md-4 icon-formularios-2000 reveal-textoright">
+            <address class="side-icon-boxes">
+                <div class="side-icon-box">
+                    <div class="side-icon">
+                        <a href="#"><span class="iconos-formulario-dos fa fa-map-marker"></span></a>
+                    </div>
+                    <p class="encabezado-formulario"><strong>Dirección: <br></strong> Saelzer <strong>#020</strong>, Valdivia <br />Región de los rios, Chile</p>
+                </div>
+                <div class="side-icon-box">
+                    <div class="side-icon">
+                        <a href="#"><span class="iconos-formulario-dos fa fa-phone"></span></a>
+                    </div>
+                    <p class="encabezado-formulario"><strong>Teléfono: <br></strong>
+                        <a class="texto-formulario" href="callto:(+56) 63 254 1038">(+56) 63 254 1038</a>
+                    </p>
+                </div>
+                <div class="side-icon-box">
+                    <div class="side-icon">
+                        <a href="#"><span class="iconos-formulario-dos fa fa-envelope-o"></span></a>
+                    </div>
+                    <p class="encabezado-formulario"><strong>Email: <br></strong>
+                        <a class="texto-formulario" href=""><span class="" >contacto@murtao.cl</span></a>
+                    </p>
+                </div>
+            </address>
+        </div>
+
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,14 @@
+{% block content %}
+    {% for evento in evento %}
+    <h2>{{ evento.fecha|date:"d" }}</h2>
+    <h2>{{ evento.fecha|date:"M" }}</h2>
+    <h2>{{ evento.fecha|date:"Y" }}</h2>
+    <h1>{{ evento.nombre }}</h1>
+    <h1>{{ evento.descripcion }}</h1>
+    <h1>{{ evento.lugar }}</h1>
+    <h1>{{ evento.hora }}</h1>
+    <img width="200px" class="" src="{{ evento.imagen.url }}"/>
+    <a href="#">{{ evento.link }}</a>
+    {% endfor %}
+{% endblock %}
+

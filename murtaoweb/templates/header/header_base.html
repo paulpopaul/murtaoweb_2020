@@ -1,0 +1,243 @@
+{% load thumbnail %}
+{% load static %}
+<style>
+.header-encabezado-solo{
+background: #BF281D;
+color: #fff;
+margin:  0 auto;
+height: 30px;
+line-height: 30px;
+border-radius: 12px;
+font-size: 16px;
+font-weight: 600;
+}
+
+.header-encabezado-retiro{
+background: #BF281D;
+color: #fff;
+margin:  0 auto;
+height: 30px;
+line-height: 30px;
+border-radius: 12px;
+font-size: 16px;
+font-weight: 600;
+padding-bottom: 20px;
+}
+.header-encabezado-celular{
+color: #000;
+width: 200px;
+height: 80px;
+height: 50px;
+line-height: 50px;
+border-radius: 12px;
+font-size: 18px;
+font-weight: 400;
+
+display: inline-block
+}
+
+
+.header-horario-box{
+
+   
+}
+.header-horario-dia{
+
+    font-size: 16px;
+    margin: 0 auto;
+
+}
+.header-horario-hora{
+
+    font-size: 17px;
+    margin: 0 auto;
+    color: #BF281D;
+}
+</style>
+<header>
+    <nav class="container-fluid fixed-top  nav-principal reveal-menuuno">
+        <div class="container d-none d-sm-block">
+            <div class="row">
+                <div class="col-md-6 col-6 nav-principal-box">
+                    <span class="iconos-nav-principal fa fa-phone fa-1x reveal-menuuno"></span>
+                    <h6 class="texto-nav-principal reveal-menuuno">(+56) 63 254 1038</h6>
+                    <span class="iconos-nav-principal fa fa-envelope fa-1x d-none d-sm-block reveal-menuuno"></span>
+                    <h6 class="texto-nav-principal d-none d-sm-block reveal-menuuno">contacto@murtao.cl</h6>
+                </div>
+                <div class="col-md-6 col-6 nav-principal-box-sociales fa-1x d-none d-sm-block">
+                    <a target="_blank" href="https://es-la.facebook.com/Murtao"><span class="iconos-nav-principal-sociales fa fa-facebook fa-1x reveal-menuuno"></span></a>
+                    <a target="_blank" href="https://twitter.com/murtaovaldivia"><span class="iconos-nav-principal-sociales fa fa-twitter fa-1x reveal-menuuno"></span></a>
+                    <a target="_blank" href="https://www.instagram.com/murtao_restoran_valdivia/"><span class="iconos-nav-principal-sociales fa fa-instagram fa-1x reveal-menuuno"></span></a>
+                    <a target="_blank" href="https://www.tripadvisor.cl/Restaurant_Review-g294302-d4088232-Reviews-Murtao_Restoran-Valdivia_Los_Rios_Region.html"><span class="iconos-nav-principal-sociales fa fa-tripadvisor fa-1x reveal-menuuno"></span></a>
+                    <a target="_blank" href="https://plus.google.com/114870683859504801871"><span class="iconos-nav-principal-sociales fa fa-google-plus fa-1x reveal-menuuno"></span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav id="main-nav" class="navbar navbar-expand-lg top-bar fixed-top sps--blw reveal-menudos">
+        <div class="container padding-box">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <img class="nav-bar-logo " src={% static 'img/logo/murtao-logo.svg' %}>
+            <div class="collapse navbar-collapse" id="navbarCollapse1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active "><a class="nav-link" href="">INICIO</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#menu-nosotros">NOSOTROS</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#menu-eventos">EVENTOS</a></li>
+                    <!--<li class="nav-item "><a class="nav-link " href="#menu-reserva">RESERVAS</a></li>-->
+                    <li class="nav-item "><a class="nav-link " href="#menu-cartarestoran">CARTA RESTORAN</a></li>
+
+                    <li class="nav-item "><a class="nav-link " href="#menu-menu">CARTA DELIVERY</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#menu-galeriass">GALERIA</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#menu-contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel fade" data-ride="carousel" data-interval="3000" data-pause="false">
+        <ol class="carousel-indicators">
+            <div class="container containerdos">
+                <div class="row">
+                    <div class="col-12 box-logo reveal-logomurtao ">
+                        <img class="box-logo-container " src={% static 'img/logo/murtao-logo2.svg' %}>
+                    </div>
+                    <!--<div class="col-12 productos-box">
+                        <h6 class=" cacaca productos-texto ">· Parrilla · Pescados · Mariscos · Tablas ·</h6>
+
+                        <h6 class="productos-texto-dos ">· Vinos · Cervezas ·</h6>
+                    </div>-->
+                    <div class="col-12 direccion-box reveal-ubicacionmurtao">
+                        <h3 class="header-encabezado-solo">RETIRO EN LOCAL </h1>
+                        <h3 class="header-encabezado-retiro">Y DELIVERY</h3>
+                        <a href="tel:+56994040267" class="header-encabezado-celular"><span class="fa fa-whatsapp "></span>+56994040267</a>
+                        <div class="header-horario-box">
+                            <h3 class="header-horario-dia">Jueves & Viernes</h3>
+                            <h3 class="header-horario-hora">de 17:00 a 20:30 hrs</h3>
+                        </div>
+                        <div class="header-horario-box">
+                            <h3 class="header-horario-dia">Sábado</h3>
+                            <h3 class="header-horario-hora">de 12:00 a 20:30 hrs</h3>
+                        </div>
+                        <div class="header-horario-box">
+                            <h3 class="header-horario-dia">Domingo</h3>
+                            <h3 class="header-horario-hora">de 12:00 a 16:00 hrs</h3>
+                        </div>
+                        <span class="direccion-icono fa fa-map-marker fa-1x"></span>
+                        <h6 class="direccion-texto ">Saelzer #020,<br> Isla Teja, Valdivia</h6>
+                    </div>
+                    <div class="col-12 scroll-box-mage  reveal-ubicacionmurtao">
+                        <div class="scroll-down"></div>
+                    </div>
+                </div>
+            </div>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <!--Slide-->
+            <div class="carousel-item active " style="background-image: url('/static/img/slider/slide01.jpg')">
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <!--Slide-->
+            <div class="carousel-item " style="background-image: url('/static/img/slider/slide02.jpg')">
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <!--Slide-->
+            <div class="carousel-item" style="background-image: url('/static/img/slider/slide03.jpg')">
+                <div class="carousel-caption ">
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/static/img/slider/slide04.jpg')">
+                <div class="carousel-caption ">
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/static/img/slider/slide05.jpg')">
+                <div class="carousel-caption ">
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/static/img/slider/slide06.jpg')">
+                <div class="carousel-caption ">
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/static/img/slider/slide07.jpg')">
+                <div class="carousel-caption ">
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('/static/img/slider/slide08.jpg')">
+                <div class="carousel-caption ">
+                </div>
+            </div>
+        </div>
+        <!--Control Izquierda-->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <!--Control Derecha-->
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="fixed-bottom  container-menu-tres-1 reveal-menutres">
+        <div id="main-nav" class="container-menu-tres ">
+            <div class="footer-social-2 d-flex navbar">
+                <div class="icono-social-2 nav-item reveal-menutres">
+                    <a class="nav-link" href="#menu-nosotros"><i class="fa fa-home"></i></a>
+                </div>
+                <div class="icono-social-2 nav-item reveal-menutres">
+                    <a class="nav-link" href="#menu-eventos"><i class="fa fa-calendar"></i></a>
+                </div>
+                <!--<div class="icono-social-2 nav-item reveal-menutres">
+                    <a class="nav-link" href="#menu-reserva"><i class="fa fa-clock-o"></i></a>
+                </div>-->
+                <div class="icono-social-2 nav-item reveal-menutres">
+                    <a class="nav-link" href="#menu-cartarestoran"><i class="fa fa-cutlery"></i></a>
+                </div>
+                <div class="icono-social-2 nav-item reveal-menutres">
+                    <a class="nav-link" href="#menu-menu"><i class="fa fa-motorcycle"></i></a>
+                </div>
+
+                <div class="icono-social-2 nav-item reveal-menutres">
+                    <a class="nav-link" href="#menu-galeriass"><i class="fa fa-camera"></i></a>
+                </div>
+                <div class="icono-social-2 nav-item reveal-menutres">
+                    <a class="nav-link" href="#menu-blog"><i class="fa fa-newspaper-o"></i></a>
+                </div>
+                <div class="icono-social-2 nav-item reveal-menutres">
+                    <a class="nav-link" href="#menu-contacto"><i class="fa fa-address-book-o"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+.nav-item > .nav-link.active{
+color:red;
+
+}
+</style>
+<script>
+$(document).ready(function(){
+$('body').scrollspy({
+target: "#main-nav"
+});
+changeNavbar();
+$(window).scroll(function(){
+changeNavbar();
+});
+function changeNavbar(){
+var navbar = $("#main-nav");
+if ($(this).scrollTop() >= 150){
+navbar.addClass("").removeClass("");
+} else if ($(this).scrollTop() < 150){
+navbar.removeClass("").addClass("");
+}
+}
+});
+</script>
+<script>
+var scroll = new SmoothScroll('a[href^="#menu-"]',{
+speed: 1000
+});
+</script>
